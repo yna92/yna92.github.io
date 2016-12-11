@@ -56,7 +56,7 @@ function fnWheel(){
 //  $('#box0').css({background:'#ff6'});
 //  $('#nav').show();
 // $('#Introduce').show();
-//开始加载动画
+// 开始加载动画
 ;(function(){
 	setTimeout(function(){
 		$('#logoBox img').animate({
@@ -89,7 +89,7 @@ function fnWheel(){
 				fnWheel();
 			})
 		}); 
-	},1);
+	},1000);
 })();
 //导航菜单
 ;(function(){  
@@ -118,4 +118,57 @@ function fnWheel(){
 	$('#introLeft div').mouseout(function(){ 
 		move(this,{width:100},{easing:'ease-out',duration:1000}) 
 	})
+})();
+function d2a(n){ 		//角转弧
+	return n*Math.PI/180;
+}		
+function a2d(n){		//弧转角
+	return n*180/Math.PI;
+}
+;(function(){
+	var R = $('#circleUl li').height()/2;
+	 var N = 20;//小球的个数
+	 for(var i = 0;i < N;i++){
+	 	$('#circleUl li').append('<span></span>');
+
+	 }
+	 $('#circleUl li span').hide();
+	 $('#circleUl li').mouseover(function(){ 
+	 	$(this).find('span').each(function(i,item){
+	 		$(item).show();
+	 		startMove(item,i*360/N);
+	 	})  
+	 })
+	 $('#circleUl li').mouseout(function(){ 
+	 	$(this).find('span').each(function(i,item){
+	 		startMove(item,0,function(){
+	 			$(item).hide();
+	 		});
+	 	})  
+	 })
+	 function startMove(obj,iTarget,fn){
+	 	var start=obj.a||0;
+	 	var dis=iTarget-start;
+	 	var count=Math.floor(300/16);
+	 	var n=0;
+	 	
+	 	clearInterval(obj.timer);
+	 	obj.timer=setInterval(function (){
+	 		n++;
+	 		var a=1-n/count;
+	 		var cur=start+dis*(1-Math.pow(a,3));
+	 		
+	 		var x=R+Math.sin(d2a(cur))*R;
+	 		var y=R-Math.cos(d2a(cur))*R;
+	 		
+	 		obj.a=cur;
+	 		obj.style.left=x+'px';
+	 		obj.style.top=y+'px';
+	 		
+	 		if(n==count){
+	 			clearInterval(obj.timer);
+	 			fn&&fn();
+	 		}
+	 	},16);
+	 }
 })();
