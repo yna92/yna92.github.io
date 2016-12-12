@@ -116,7 +116,8 @@ function moveFloor(){
 	oOutFloor.value = curFloor;
 }
  //随时检测是否有楼层被按下
-function testState(){ 
+function testState(){
+              oTitle.innerHTML = state;
               if(state == 0){ //电梯正处于停止状态
               	for(j = 0;j<arr.length;j++){
               		if(arr[j]==1){

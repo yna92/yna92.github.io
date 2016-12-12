@@ -167,3 +167,24 @@ li{
  .title{
  	margin-bottom:50px;
  }
+ #introRight .introBox{
+	height:350px;
+	width:260px;
+	margin: 160px auto;
+	background: #fff;
+	overflow: hidden; 
+	position: relative;
+ }
+  #introRight .introBox .topA{
+	width:40px;
+	height:30px;
+	top:-30px;
+	background: #999; 
+	opacity: 0.5;
+	display: inline-block;
+	position: absolute;
+  }
+  #introRight li{
+  	height:350px;
+	width:260px;  
+  }

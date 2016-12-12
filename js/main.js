@@ -119,12 +119,15 @@ function fnWheel(){
 		move(this,{width:100},{easing:'ease-out',duration:1000}) 
 	})
 })();
-function d2a(n){ 		//角转弧
+//角转弧
+function d2a(n){ 		
 	return n*Math.PI/180;
-}		
-function a2d(n){		//弧转角
+}	
+//弧转角	
+function a2d(n){		
 	return n*180/Math.PI;
 }
+//鼠标移入小球转动
 ;(function(){
 	var R = $('#circleUl li').height()/2;
 	 var N = 20;//小球的个数
