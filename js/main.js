@@ -12,12 +12,13 @@
 })();
 
 fnWheel();
-//滚轮滚动式
+//滚轮滚动时
 function changeNav(t){
 	var index = -t/$(window).height();  
 	$('#pos').css('background-color',$('#box'+index).css('background-color'));  
 	doMove($('#pos')[0],'left',$('#navUl li').eq(index)[0].offsetLeft);
 }
+//滚轮滚动时，设置ul的top值
 function changeMain(t){
 	move($('#ul1')[0],{
 		top:t
@@ -92,6 +93,11 @@ function fnWheel(){
 	},1000);
 })();
 //导航菜单
+function navMouseOut(){
+	var index = -$('#ul1').offset().top/$(window).height();  
+	left = $('#navUl li').eq(index)[0].offsetLeft; 
+	doMove($('#pos')[0],'left',left);
+}
 ;(function(){  
 	var left=0;  
 	$('#navUl li').length = $('#navUl li').length - 1;
@@ -99,14 +105,13 @@ function fnWheel(){
 		$(this).mouseover(function(){
 			doMove($('#pos')[0],'left',this.offsetLeft);
 		})
-		$(this).mouseout(function(){
-			var index = -$('#ul1').offset().top/$(window).height();  
-			left = $('#navUl li').eq(index)[0].offsetLeft; 
-			doMove($('#pos')[0],'left',left);
-		})
+		$(this).bind('mouseout',navMouseOut);
 		$(this).click(function(){
-			left=this.offsetLeft;
+			$(this).unbind('mouseout',navMouseOut)
+			// left=this.offsetLeft;
 			doMove($('#pos')[0],'left',left);
+			changeMain(-i*$(window).height());
+			
 		})
 	})
 })();
@@ -128,50 +133,58 @@ function a2d(n){
 	return n*180/Math.PI;
 }
 //鼠标移入小球转动
-;(function(){
-	var R = $('#circleUl li').height()/2;
-	 var N = 20;//小球的个数
-	 for(var i = 0;i < N;i++){
-	 	$('#circleUl li').append('<span></span>');
+// ;(function(){
+// 	var R = $('#circleUl li').height()/2;
+// 	 var N = 20;//小球的个数
+// 	 for(var i = 0;i < N;i++){
+// 	 	$('#circleUl li').append('<span></span>');
 
-	 }
-	 $('#circleUl li span').hide();
-	 $('#circleUl li').mouseover(function(){ 
-	 	$(this).find('span').each(function(i,item){
-	 		$(item).show();
-	 		startMove(item,i*360/N);
-	 	})  
-	 })
-	 $('#circleUl li').mouseout(function(){ 
-	 	$(this).find('span').each(function(i,item){
-	 		startMove(item,0,function(){
-	 			$(item).hide();
-	 		});
-	 	})  
-	 })
-	 function startMove(obj,iTarget,fn){
-	 	var start=obj.a||0;
-	 	var dis=iTarget-start;
-	 	var count=Math.floor(300/16);
-	 	var n=0;
+// 	 }
+// 	 $('#circleUl li span').hide();
+// 	 $('#circleUl li').mouseover(function(){ 
+// 	 	$(this).find('span').each(function(i,item){
+// 	 		$(item).show();
+// 	 		startMove(item,i*360/N);
+// 	 	})  
+// 	 })
+// 	 $('#circleUl li').mouseout(function(){ 
+// 	 	$(this).find('span').each(function(i,item){
+// 	 		startMove(item,0,function(){
+// 	 			$(item).hide();
+// 	 		});
+// 	 	})  
+// 	 })
+// 	 function startMove(obj,iTarget,fn){
+// 	 	var start=obj.a||0;
+// 	 	var dis=iTarget-start;
+// 	 	var count=Math.floor(300/16);
+// 	 	var n=0;
 	 	
-	 	clearInterval(obj.timer);
-	 	obj.timer=setInterval(function (){
-	 		n++;
-	 		var a=1-n/count;
-	 		var cur=start+dis*(1-Math.pow(a,3));
+// 	 	clearInterval(obj.timer);
+// 	 	obj.timer=setInterval(function (){
+// 	 		n++;
+// 	 		var a=1-n/count;
+// 	 		var cur=start+dis*(1-Math.pow(a,3));
 	 		
-	 		var x=R+Math.sin(d2a(cur))*R;
-	 		var y=R-Math.cos(d2a(cur))*R;
+// 	 		var x=R+Math.sin(d2a(cur))*R;
+// 	 		var y=R-Math.cos(d2a(cur))*R;
 	 		
-	 		obj.a=cur;
-	 		obj.style.left=x+'px';
-	 		obj.style.top=y+'px';
+// 	 		obj.a=cur;
+// 	 		obj.style.left=x+'px';
+// 	 		obj.style.top=y+'px';
 	 		
-	 		if(n==count){
-	 			clearInterval(obj.timer);
-	 			fn&&fn();
-	 		}
-	 	},16);
-	 }
+// 	 		if(n==count){
+// 	 			clearInterval(obj.timer);
+// 	 			fn&&fn();
+// 	 		}
+// 	 	},16);
+// 	 }
+// })();
+
+
+//穿墙效果
+;(function(){
+	$('#moveBox ul').each(function(i,item){
+		through(this);
+	}) 
 })();

@@ -1,5 +1,4 @@
-'use script'
-
+'use script' 
 //产生随机数[n,m)
 function rnd(n,m){
 	return parseInt(Math.random()*(m-n))+n
@@ -100,7 +99,8 @@ function removeEvent(obj,sEv,fn){
  function getStyle(obj,sName){
  	return (obj.currentStyle||getComputedStyle(obj,false))[sName];
  }
- function move(obj,json,options){
+ //运动框架
+function move(obj,json,options){
  	options=options||{};
  	options.duration=options.duration||700;
  	options.easing=options.easing||'ease-out';
@@ -145,7 +145,7 @@ function removeEvent(obj,sEv,fn){
  		}
  	},30);
  }
-
+//弹性运动
  ;(function (){
  	var start=0;
  	var iSpeed=20;
@@ -164,6 +164,57 @@ function removeEvent(obj,sEv,fn){
  		},16);
  	};
  })();
+function getDir(obj,ev){
+ 	var x = obj.offsetLeft + obj.offsetWidth/2 - ev.clientX;
+ 	var y = obj.offsetTop + obj.offsetHeight/2 - ev.clientY;
+ 	return Math.round((Math.atan2(y,x)*180/Math.PI + 180)/90)%4;
+ }
+ //穿墙效果 宽高定死
+function through(obj){
+ 	var oLi = obj.children[0];
+ 	obj.onmouseenter = function(ev){
+ 		var oEvent = ev || event;
+ 		var dir = getDir(obj,oEvent); 
+ 		switch(dir){
+ 			case 0:
+ 				oLi.style.left = '250px';
+ 				oLi.style.top = 0;
+ 				break;
+ 			case 1:
+ 				oLi.style.left = 0 ;
+ 				oLi.style.top = '200px';
+ 				break;
+ 			case 2:
+ 				oLi.style.left = '-250px';
+ 				oLi.style.top = 0;
+ 				break;
+ 			case 3:
+ 				oLi.style.left = 0;
+ 				oLi.style.top = '-200px';
+ 				break;
+
+ 		}
+ 		move(oLi,{left:0,top:0});
+ 	}
+ 	obj.onmouseleave = function(ev){
+ 		var oEvent = ev || event;
+ 		var dir = getDir(obj,oEvent);
+ 		switch(dir){
+ 			case 0: 
+ 				move(oLi,{left:250,top:0})
+ 				break;
+ 			case 1: 
+ 				move(oLi,{left:0,top:200})
+ 				break;
+ 			case 2: 
+ 				move(oLi,{left:-250,top:0})
+ 				break;
+ 			case 3: 
+ 				move(oLi,{left:0,top:-200})
+ 				break; 
+ 		} 
+ 	} 
+ }
 
 
 
