@@ -177,20 +177,20 @@ function through(obj){
  		var dir = getDir(obj,oEvent); 
  		switch(dir){
  			case 0:
- 				oLi.style.left = '250px';
+ 				oLi.style.left = '200px';
  				oLi.style.top = 0;
  				break;
  			case 1:
  				oLi.style.left = 0 ;
- 				oLi.style.top = '200px';
+ 				oLi.style.top = '160px';
  				break;
  			case 2:
- 				oLi.style.left = '-250px';
+ 				oLi.style.left = '-200px';
  				oLi.style.top = 0;
  				break;
  			case 3:
  				oLi.style.left = 0;
- 				oLi.style.top = '-200px';
+ 				oLi.style.top = '-160px';
  				break;
 
  		}
@@ -201,16 +201,16 @@ function through(obj){
  		var dir = getDir(obj,oEvent);
  		switch(dir){
  			case 0: 
- 				move(oLi,{left:250,top:0})
+ 				move(oLi,{left:200,top:0})
  				break;
  			case 1: 
- 				move(oLi,{left:0,top:200})
+ 				move(oLi,{left:0,top:160})
  				break;
  			case 2: 
- 				move(oLi,{left:-250,top:0})
+ 				move(oLi,{left:-200,top:0})
  				break;
  			case 3: 
- 				move(oLi,{left:0,top:-200})
+ 				move(oLi,{left:0,top:-160})
  				break; 
  		} 
  	} 

@@ -12,11 +12,23 @@
 		$('.box').height($(window).height());
 		$('.allSkill').height($(window).height());
 		$('.allSkill').css('top',-$(window).height()+'px');
+		var left = $('#pos')[0].offsetLeft;
+		var index = left/100;
+		var t = - index * $(window).height(); 
+		$('#ul1').css('top',t);
+		$('.allSkill').css('top',0);
+		if(index!= 4){
+			$('.allSkill').css('top',-$(window).height()+'px');
+			$(".oneLine").each(function(i,item){ 
+				$(item).css('height',0); 
+			})  
+		}
+		 
 
 	})
 })();
 
-fnWheel();
+// fnWheel();
 //滚轮滚动时
 function changeNav(t){
 	var index = -t/$(window).height();  
@@ -25,6 +37,7 @@ function changeNav(t){
 }
 //滚轮滚动时，设置ul的top值
 function changeMain(t){
+	$('#box4').css('background','#ccf');
 	if(t/$(window).height() != -4){
 		$('.allSkill').css('top',-$(window).height()+'px');
 		$(".oneLine").each(function(i,item){ 
@@ -47,19 +60,20 @@ function changeMain(t){
 	})  
 }
 //滚动滚轮
-var bOk = true;
+var bOk = true; 
+
 function fnWheel(){ 
  	addWheel(document,function(bDown){ 
  		if(bOk){
  			bOk = false;
  			if(bDown){ 
- 				var t = $('#ul1').position().top - $('#ul1 .box').height(); 
- 				if(t <= -($('#ul1').height() - $('#ul1 .box').height())){ 
- 					t =  -($('#ul1').height() - $('#ul1 .box').height());
+ 				var t = $('#ul1').position().top - $(window).height(); 
+ 				if(t <= -($('#ul1').height() - $(window).height())){ 
+ 					t =  -($('#ul1').height() - $(window).height());
  				}
  				changeMain(t); 
  			}else{
- 				var t = $('#ul1').position().top + $('#ul1 .box').height();  
+ 				var t = $('#ul1').position().top + $(window).height();  
  				if(t >= 0){ 
  					t =  0;
  				}
@@ -153,73 +167,142 @@ function a2d(n){
 		through(this);
 	}) 
 })();
-//小球下落
-function ballFall(){
+
+;(function(){
 	var arr = [{
-		height:400,
+		height:300,
 		lineColor:'#f66',
 		ballColor:'#f66',
-		text:'html'
+		text:'html',
+		txt:'熟悉html，能够配合css完成兼容各种浏览器的页面' 
 	},{
-		height:400,
+		height:300,
 		lineColor:'#339',
 		ballColor:'#339',
-		text:'css'
+		text:'css',
+		txt:'熟悉css,能够完成无兼容问题的页面'
 	},{
-		height:500,
+		height:320,
 		lineColor:'#069',
 		ballColor:'#069',
-		text:'JS'
+		text:'JS',
+		txt:'熟悉JS，对JS的各大对象有深入了解，熟悉面向对象编程'
 	},{
-		height:300,
+		height:200,
 		lineColor:'#06c',
 		ballColor:'#06c',
-		text:'nodeJs'
-	},{
-		height:450,
-		lineColor:'#f90',
-		ballColor:'#f90',
-		text:'ajax'
-	},{
-		height:350,
-		lineColor:'#f60',
-		ballColor:'#f60',
-		text:'angular'
+		text:'nodeJs',
+		txt:'熟悉nodeJs，能够用node抓取网页数据，并别独立完成node搭建个人博客'
 	},{
 		height:250,
+		lineColor:'#f90',
+		ballColor:'#f90',
+		text:'ajax',
+		txt:'熟悉ajax，独立完成过微博发表，许愿墙等数据交互'
+	},{
+		height:200,
+		lineColor:'#f60',
+		ballColor:'#f60',
+		text:'angular',
+		txt:'熟悉angular，--------'
+	},{
+		height:200,
 		lineColor:'#09c',
 		ballColor:'#09c',
-		text:'vue'
+		text:'vue',
+		txt:'熟悉vue，--------'
 	},{
-		height:100,
+		height:50,
 		lineColor:'#f66',
 		ballColor:'#f66',
-		text:'php'
+		text:'php',
+		txt:'了解php，了解php的基本语法'
 	},{
-		height:150,
+		height:80,
 		lineColor:'#fc3',
 		ballColor:'#fc3',
-		text:'java'
+		text:'java',
+		txt:'熟悉java，学校时期完成过超市管理系统'
 	},{
-		height:300,
+		height:120,
 		lineColor:'#f96',
 		ballColor:'#f96',
-		text:'c'
+		text:'c',
+		txt:'熟悉html，学校时期完成各种管理系统'
 	} ]
-	//9c3
-	$('.oneBall').each(function(i,item){
-		$(item).css('background',arr[i].ballColor);
-		$(item).html(arr[i].text);
+	$(arr).each(function(){
+		$('<div class="oneSkill"><div class="oneLine"></div><div class="oneBall"></div><div class="oneTxt"></div></div>')
+		.appendTo($('.skillBox').get(0));
 	})
-	$('.oneBall').animate({
-		'opacity':1
-	}) 
-	$(".oneLine").each(function(i,item){ 
-		$(item).css('background',arr[i].lineColor);
-		doMove(item,{
-			'height':arr[i].height
+	$('<div id="showTxt"><span></span><div>').appendTo($('.skillBox').get(0));
+	$('.oneTxt').each(function(i,item){//设置描述文字
+		$(item).html(arr[i].txt);
+	})
+	//移入小球
+	$('.oneBall').mouseover(function(){  
+		
+		$('.oneBall').each(function(i,item){  //恢复小球原来的颜色
+			$(item).css({
+				'background':arr[i].ballColor,
+				color:'#fff'
+			});
+			$(item).html(arr[i].text);
+		}) 
+		$(".oneLine").each(function(i,item){ //恢复线的颜色
+			$(item).css('background',arr[i].lineColor); 
+		})   
+		var _this = this;
+	 
+		
+		$('#showTxt span').html("");
+		doMove($('#showTxt span')[0],{
+			top:60
 		},{
-			'duration':2600
+			complete:function(){
+				$('#showTxt span').html($('.oneTxt').eq($(_this).index('.oneBall')).html()); //改变显示文字
+				doMove($('#showTxt span')[0],{
+					top:30
+				})
+			}
+		}) 
+		 
+		$('#box4').css({ 
+			opacity:0.8,
+			'backgroundColor':$(this).css('backgroundColor')
+		});
+		$('#box4').animate({
+			opacity:1
 		})
-	})  
-}
+	 	$(this).css({
+	 		background:'#fff',
+	 		color:$('#box4').css('backgroundColor')
+	 	}) 
+	 	$('.oneLine').eq($(this).index('.oneBall')).css({
+	 		background:'#fff'
+	 	})
+	})
+	//小球下落
+	window.ballFall = function (){  
+		//9c3
+		$('.oneBall').each(function(i,item){
+			$(item).css('background',arr[i].ballColor);
+			$(item).html(arr[i].text);
+		})
+		$('.oneBall').animate({
+			'opacity':1
+		}) 
+		$(".oneLine").each(function(i,item){ 
+			$(item).css('background',arr[i].lineColor);
+			doMove(item,{
+				'height':arr[i].height
+			},{
+				'duration':3000
+			})
+		})  
+	}
+
+})();
+
+
+
+ 
