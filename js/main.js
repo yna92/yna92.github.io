@@ -5,9 +5,14 @@
 	$('#box').height($(window).height());
 	$('.box').height($(window).height()); 
 	$("#ul1").height($('#ul1 .box').length * $('#ul1 .box').height());
+	$('.allSkill').height($(window).height());
+	$('.allSkill').css('top',-$(window).height()+'px');
 	$(window).resize(function(){
 		$('#box').height($(window).height());
 		$('.box').height($(window).height());
+		$('.allSkill').height($(window).height());
+		$('.allSkill').css('top',-$(window).height()+'px');
+
 	})
 })();
 
@@ -16,20 +21,30 @@ fnWheel();
 function changeNav(t){
 	var index = -t/$(window).height();  
 	$('#pos').css('background-color',$('#box'+index).css('background-color'));  
-	doMove($('#pos')[0],'left',$('#navUl li').eq(index)[0].offsetLeft);
+	startMove($('#pos')[0],'left',$('#navUl li:eq('+index+')')[0].offsetLeft);
 }
 //滚轮滚动时，设置ul的top值
 function changeMain(t){
+	if(t/$(window).height() != -4){
+		$('.allSkill').css('top',-$(window).height()+'px');
+		$(".oneLine").each(function(i,item){ 
+			$(item).css('height',0); 
+		})  
+	}
 	move($('#ul1')[0],{
 		top:t
 	},{
 		easing:'ease-out',
 		duration:1000,
 		complete:function(){
+			if(t/$(window).height() == -4){ 
+				$('.allSkill').css('top','0px');
+				ballFall();
+			}
 			changeNav(t)
 			bOk =  true;
 		}
-	}) 
+	})  
 }
 //滚动滚轮
 var bOk = true;
@@ -95,23 +110,22 @@ function fnWheel(){
 //导航菜单
 function navMouseOut(){
 	var index = -$('#ul1').offset().top/$(window).height();  
-	left = $('#navUl li').eq(index)[0].offsetLeft; 
-	doMove($('#pos')[0],'left',left);
+	var left = $('#navUl li').eq(index)[0].offsetLeft; 
+	startMove($('#pos')[0],'left',left);
 }
 ;(function(){  
 	var left=0;  
 	$('#navUl li').length = $('#navUl li').length - 1;
 	$('#navUl li').each(function(i,item){
 		$(this).mouseover(function(){
-			doMove($('#pos')[0],'left',this.offsetLeft);
+			startMove($('#pos')[0],'left',this.offsetLeft);
 		})
 		$(this).bind('mouseout',navMouseOut);
 		$(this).click(function(){
 			$(this).unbind('mouseout',navMouseOut)
-			// left=this.offsetLeft;
-			doMove($('#pos')[0],'left',left);
-			changeMain(-i*$(window).height());
-			
+			left=this.offsetLeft;
+			startMove($('#pos')[0],'left',left);
+			changeMain(-i*$(window).height()); 
 		})
 	})
 })();
@@ -132,59 +146,80 @@ function d2a(n){
 function a2d(n){		
 	return n*180/Math.PI;
 }
-//鼠标移入小球转动
-// ;(function(){
-// 	var R = $('#circleUl li').height()/2;
-// 	 var N = 20;//小球的个数
-// 	 for(var i = 0;i < N;i++){
-// 	 	$('#circleUl li').append('<span></span>');
-
-// 	 }
-// 	 $('#circleUl li span').hide();
-// 	 $('#circleUl li').mouseover(function(){ 
-// 	 	$(this).find('span').each(function(i,item){
-// 	 		$(item).show();
-// 	 		startMove(item,i*360/N);
-// 	 	})  
-// 	 })
-// 	 $('#circleUl li').mouseout(function(){ 
-// 	 	$(this).find('span').each(function(i,item){
-// 	 		startMove(item,0,function(){
-// 	 			$(item).hide();
-// 	 		});
-// 	 	})  
-// 	 })
-// 	 function startMove(obj,iTarget,fn){
-// 	 	var start=obj.a||0;
-// 	 	var dis=iTarget-start;
-// 	 	var count=Math.floor(300/16);
-// 	 	var n=0;
-	 	
-// 	 	clearInterval(obj.timer);
-// 	 	obj.timer=setInterval(function (){
-// 	 		n++;
-// 	 		var a=1-n/count;
-// 	 		var cur=start+dis*(1-Math.pow(a,3));
-	 		
-// 	 		var x=R+Math.sin(d2a(cur))*R;
-// 	 		var y=R-Math.cos(d2a(cur))*R;
-	 		
-// 	 		obj.a=cur;
-// 	 		obj.style.left=x+'px';
-// 	 		obj.style.top=y+'px';
-	 		
-// 	 		if(n==count){
-// 	 			clearInterval(obj.timer);
-// 	 			fn&&fn();
-// 	 		}
-// 	 	},16);
-// 	 }
-// })();
-
-
+  
 //穿墙效果
 ;(function(){
 	$('#moveBox ul').each(function(i,item){
 		through(this);
 	}) 
 })();
+//小球下落
+function ballFall(){
+	var arr = [{
+		height:400,
+		lineColor:'#f66',
+		ballColor:'#f66',
+		text:'html'
+	},{
+		height:400,
+		lineColor:'#339',
+		ballColor:'#339',
+		text:'css'
+	},{
+		height:500,
+		lineColor:'#069',
+		ballColor:'#069',
+		text:'JS'
+	},{
+		height:300,
+		lineColor:'#06c',
+		ballColor:'#06c',
+		text:'nodeJs'
+	},{
+		height:450,
+		lineColor:'#f90',
+		ballColor:'#f90',
+		text:'ajax'
+	},{
+		height:350,
+		lineColor:'#f60',
+		ballColor:'#f60',
+		text:'angular'
+	},{
+		height:250,
+		lineColor:'#09c',
+		ballColor:'#09c',
+		text:'vue'
+	},{
+		height:100,
+		lineColor:'#f66',
+		ballColor:'#f66',
+		text:'php'
+	},{
+		height:150,
+		lineColor:'#fc3',
+		ballColor:'#fc3',
+		text:'java'
+	},{
+		height:300,
+		lineColor:'#f96',
+		ballColor:'#f96',
+		text:'c'
+	} ]
+	//9c3
+	$('.oneBall').each(function(i,item){
+		$(item).css('background',arr[i].ballColor);
+		$(item).html(arr[i].text);
+	})
+	$('.oneBall').animate({
+		'opacity':1
+	}) 
+	$(".oneLine").each(function(i,item){ 
+		$(item).css('background',arr[i].lineColor);
+		doMove(item,{
+			'height':arr[i].height
+		},{
+			'duration':2600
+		})
+	})  
+}
