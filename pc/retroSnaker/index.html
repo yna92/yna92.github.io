@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇</title>	
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/fn.js"></script>	
+	<script type="text/javascript" src="js/grade.js"></script>	
+	<script type="text/javascript" src="js/move.js"></script>	
+	<style>
+		body{ background: pink;}
+		#head{ height:100px; width:96%; margin: 0 auto; background: rgb(100,255,0);color: red; font-size: 56px; text-align: center; line-height: 100px; border:10px solid #999;  }
+		#head span{margin:0 12px;}
+		#snakeBorder{width:400px;  height:400px; border:50px solid #999;  margin: 0 auto;  position: relative; position: absolute; top:130px; left: 400px; background: rgb(100,255,0);
+				filter: progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/ 
+       				    -moz-box-shadow: 5px 5px 10px 2px #909090;/*firefox*/
+   				    -webkit-box-shadow: 5px 5px 10px 2px #909090;/*safari或chrome*/
+    				    box-shadow:5px 5px 10px 2px #666666;/*opera或ie9*/}
+		#snakeBorder #eat{width:20px; height:20px; background-color: blue;}
+		#snakeBorder div{width:20px; height:20px; background: red; position: absolute; top:0; left:0;}
+		#grade{ width:120px; height:50px; background:rgb(100,255,0); border:3px solid #999;  position: absolute; top:220px;right:200px;}
+		#grade span{ font-weight: bold;color: blue; vertical-align: middle; line-height: 50px; margin: 5px;}
+	</style>
+	<script> 
+	window.onload = function(){
+		// oHead = document.getElementById('head');
+		// var headTimer = setInterval(function(){
+		// 	startMove(oHead,{opacity: 0},function(){
+		// 		startMove(oHead,{opacity: 100});
+		// 	});
+		// },3000)
+		
+		drag();
+		window. arr = [[40,0],[20,0],[0,0]];//保存蛇体
+		window. oSnakeBorder = document.getElementById("snakeBorder");
+		window. direction = "right"; 
+		init();//初始化食物的位置，和形成最初的蛇
+		window.l = 40;
+		window.t = 0;//蛇头的位置
+		window.timer = null;
+		window.cTime= 300; 
+		window.grade = 0;
+		window.countEat = 0;
+		window.countTime = 300;
+		move();
+		EventUtil.addHandler(document,"keyup",function(ev)
+		{
+			var oEvent = EventUtil.getEvent(ev);
+			switch(oEvent.keyCode){
+				case 37:
+					if(direction == "top" ||direction == "bottom"){
+						clearInterval(timer);
+						direction ="left";
+						move();						
+					}
+					break;
+				case 38:
+					if(direction == "left" || direction == "right"){
+						clearInterval(timer);
+						direction = "top";
+						move();
+					}
+					break;
+				case 39:
+					if(direction == "top" ||direction == "bottom"){
+						clearInterval(timer);
+						direction ="right";
+						move();						
+					}
+					break;
+				case 40:
+					if(direction == "left" || direction == "right"){
+						clearInterval(timer);
+						direction = "bottom";
+						move();
+					}
+					break;
+			}
+		})
+
+	}
+	</script>
+</head>
+<body>
+<!-- 	<div id="head"><span>贪</span><span>吃</span><span>蛇</span><span>小</span><span>游</span><span>戏</span></div>
+ -->	<div id="snakeBorder">
+		<div id="eat"></div>
+		<div></div>
+		<div></div>
+		<div></div>		
+	</div>
+	<div id = "grade">
+		<span>得分:</span>
+		<span></span>
+	</div>	
+</body>
+</html>

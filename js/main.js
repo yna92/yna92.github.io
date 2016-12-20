@@ -251,9 +251,7 @@ function a2d(n){
 		$(".oneLine").each(function(i,item){ //恢复线的颜色
 			$(item).css('background',arr[i].lineColor); 
 		})   
-		var _this = this;
-	 
-		
+		var _this = this; 
 		$('#showTxt span').html("");
 		doMove($('#showTxt span')[0],{
 			top:60
@@ -264,8 +262,7 @@ function a2d(n){
 					top:30
 				})
 			}
-		}) 
-		 
+		})  
 		$('#box4').css({ 
 			opacity:0.8,
 			'backgroundColor':$(this).css('backgroundColor')
@@ -285,7 +282,10 @@ function a2d(n){
 	window.ballFall = function (){  
 		//9c3
 		$('.oneBall').each(function(i,item){
-			$(item).css('background',arr[i].ballColor);
+			$(item).css({
+				'background':arr[i].ballColor,
+				'color':'#fff'
+			});
 			$(item).html(arr[i].text);
 		})
 		$('.oneBall').animate({
