@@ -26,7 +26,7 @@ html{
 }
 .hd_img_box{
 	width:100%;
-	line-height: 0.1rem;
+	line-height: 1.5rem;
 	position: relative;
 }
 .hd_font{
@@ -199,16 +199,18 @@ html{
 }
 
 /****************/
-.hd_img_box .pro_hd_font{
+.hd_img_box  .pro_hd_font{
 	position: absolute;
 	font-size: 0.3rem;
 	left:50%;
 	top:50%;
 	color:#fff;
-	width:1.2rem;
-	height:0.3rem;
-	margin-left:-0.6rem;
-	margin-top:-0.15rem;
+	width:1.4rem;
+	height:0.32rem;
+	text-align: center;
+	line-height:0.32rem;
+	margin-left:-0.7rem;
+	margin-top:-0.16rem;
 }
 .swiper-container .proItem{
 	width:0.8rem;
