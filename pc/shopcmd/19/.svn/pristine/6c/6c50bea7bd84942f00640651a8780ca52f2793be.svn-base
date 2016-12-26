@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+
+</style>
+</head>
+
+<body>
+<div class="logo">
+	<img src="img/1.jpg" alt=""/>
+</div>
+<div class="box">
+	<div><img src="img/5.jpg" alt=""/></div>
+    <div class="box1 clearfix">
+            <div class="fl">
+                <p>海云微分销是一个分销商城管理平台，海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理海云微
+                </p>
+                <p>海云微分销是一个分销商城管理平台，海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理平台海云微分销是一个分销商
+                </p>
+             </div>
+         	 <div><img  class="fr" src="img/2.png" alt=""/></div>
+    </div>
+    <div><img src="img/6.png"/></div>
+    <div class="box2 clearfix">
+    		 <div><img  class="fl" src="img/3.png" alt=""/></div>
+    		 <div class="fr">
+                     
+                     <p class="p1">一键创建属于自己的个性化商城</p>
+                     <p class="p2">海云微分销是一个分销商城管理平台，海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理平台海云微分销是一个分销商
+                     </p>
+             </div>
+             
+    </div>
+    
+    <div class="box3 clearfix">
+            <div class="fl">
+                <p class="p1">朋友就是拿来“卖“的</p>
+                <p>海云微分销是一个分销商城管理平台，海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理平台海云微分销是一个分销商城管理平台海云微分销是一个分销商
+                </p>
+             </div>
+         	 <div><img  class="fr" src="img/4.png" alt=""/></div>
+    </div>
+    <input type="button" value="创建我的商城"  class="inp"/>
+    
+    
+    
+</div>
+<div class="footer">
+	<div class="box4 clearfix">
+            <div class="t1 fl">
+                <div class="s clearfix">
+                    <a href="javascript:;" class="fl">关于人人店</a>
+                    <a href="javascript:;" class="hh fl">商店系统</a>
+                    <a href="javascript:;" class="hh fl">开放平台</a>
+                    <a href="javascript:;" class="hh fl">人人分销</a>
+                    <a href="javascript:;" class="hh fl">新闻动态</a>
+                    <a href="javascript:;" class="hh fl">联系我们</a>
+                    <span class="fr"><img src="img/7.jpg" alt=""/>4008-188-360</span>
+                </div>
+                
+            </div>
+            <div class="b1">Copyright 2015 苏州海云网络科技有限公司版权所有 | 苏ICP备15038170号-3</div>
+     </div>  
+</div>
+</body>
+</html>

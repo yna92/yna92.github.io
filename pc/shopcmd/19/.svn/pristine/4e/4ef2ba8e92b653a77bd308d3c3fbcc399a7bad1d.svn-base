@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style_yingxiao.css" rel="stylesheet"/>
+<style>
+	
+</style>
+</head>
+
+<body>
+<div class="xingxiao">
+    <div class="logo">
+        <img src="img/y1.png" alt=""/>
+        <input type="button" value="马上试用" class="inp"/>
+    </div>
+    <div class="content">
+        <div class="box">
+            <div><img class="mm" src="img/y2.jpg" alt=""/></div>
+        </div>
+        <div class="box1">
+            <div class="tu clearfix">
+                <img class="tu2 fl" src="img/y3.jpg" alt=""/>
+                <img class="tu2 fl" src="img/y4.jpg" alt=""/>
+                <img class="tu3 fr" src="img/y5.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="box2 clearfix">
+            <img class="fl" src="img/y6.jpg" alt=""/>
+            <img class="fl" src="img/y7.jpg" alt=""/>
+            <img class="fr" src="img/y8.jpg" alt=""/>
+        </div>
+     
+    </div>
+    
+    <div class="column">
+        <div class="main">
+            <div class="box3"><img src="img/y9.jpg" alt=""/></div>
+            <div class="box4"><img src="img/y10.jpg" alt=""/></div>
+            
+            
+        </div>
+    </div>
+    
+    
+</div>
+</body>
+</html>

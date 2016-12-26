@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/common.css"> 
+	<script src="../js/jquery-1.7.2.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header_contaiter"> 
+				<div class="hd_left">
+					<a href="javascript:;">
+						<img src="../img/logo.jpg" alt="">
+					</a> 
+				</div>
+				<ul class="hd_right">
+					<li><a href="javascript:;">关于人人店</a></li> 
+					<li><a href="javascript:;">商城系统</a></li> 
+					<li><a href="javascript:;">开放平台</a></li> 
+					<li><a href="javascript:;">人人分销</a></li> 
+					<li><a href="javascript:;">用户中心</a></li> 
+				</ul> 
+		</div> 
+	</header>
+	<section>
+		<div class="main_box">
+			<ul class="main_ul">
+				<li>
+					<a href="javascript:;">
+						<img src="../img/main1.jpg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="../img/main2.jpg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="../img/main3.jpg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="../img/main4.jpg" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="../img/main5.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+			<div class="main_page">
+				<div class="main_bar">
+					<div class="active"></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div> 
+				</div> 
+			</div>
+		</div>
+	</section> 
+	<section class="bg">
+		<div class="con_contaiter">
+			<div class="con_server">
+				<h2 class="con_ser"></h2>
+			</div>
+			<div class="con_font">
+				<div> 
+					shopcmd云道，国内领先的独立电商解决方案及全渠道营销平台。完整的产品体系，简约的系统，个性化前端，全覆盖多渠道营销体系...  
+				</div>
+				<div>
+					我们致力于打造一个服务于品牌商城/独立电商的完整生态，让企业的独立电商之路变得更简单，也更有价值！
+				</div>
+			</div>
+			<div class="con_pro">
+				<div class="pro_1">
+					<a href="javascript:;">
+						<div class="pro_img pro_img_1">
+							
+						</div>
+						<h4>我是卖家</h4> 
+						<p>shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们从互联网时代品牌建设和品牌营销的全新视角，赋予了品牌商城及独立电商更大的生存空间和存在价值！</p>
+						<input type="button" value="我要建站" class="pro_btn">
+					</a>
+				</div>
+				<div class="pro_1">
+					<a href="javascript:;">
+						<div class="pro_img pro_img_2">
+							
+						</div>
+						<h4>我要营销</h4> 
+						<p>shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们从互联网时代品牌建设和品牌营销的全新视角，赋予了品牌商城及独立电商更大的生存空间和存在价值！</p>
+						<input type="button" value="我要推广" class="pro_btn">
+					</a>
+				</div>
+				<div class="pro_1">
+					<a href="javascript:;">
+						<div class="pro_img pro_img_3">
+							
+						</div>
+						<h4>媒体合作</h4> 
+						<p>真正的全民营销时代，无需学习，无需维护，通过您的网站、朋友圈、媒体流量、移动展现、媒体解决方案获取收益。我们致力于实现合作媒体流量价值的最大化。</p>
+						<input type="button" value="我要合作" class="pro_btn">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="con_contaiter">
+			<div class="con_server">
+				<h2 class="con_case"></h2>
+			</div> 
+			<div class="con_scroll">
+				<ul class="con_scroll_ul">
+					<li>
+						<a href="javascript">
+							<img src="../img/scroll.png" alt="">
+							<div class="scroll_mark">
+								<span class="search_span"></span>
+							</div>
+							<div class="scroll_bottom">
+								活动图1
+							</div>
+						</a>  
+					</li>
+					<li>
+						<a href="javascript">
+							<img src="../img/scroll.png" alt="">
+							<div class="scroll_mark">
+								<span class="search_span"></span>
+							</div>
+							<div class="scroll_bottom">
+								活动图1
+							</div>
+						</a>  
+					</li>
+					<li>
+						<a href="javascript">
+							<img src="../img/scroll.png" alt="">
+							<div class="scroll_mark">
+								<span class="search_span"></span>
+							</div>
+							<div class="scroll_bottom">
+								活动图1
+							</div>
+						</a>  
+					</li>
+				</ul>
+				<div class="con_prev"><</div>
+				<div class="con_next">></div>
+			</div>
+		</div>
+		<div class="con_contaiter">
+			<div class="con_server">
+				<h2 class="con_case"></h2>
+			</div> 
+			<div class="con_media">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/baidu.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../img/jumei.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/taobao.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/fenghuang.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/suning.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/guoke.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/fenghuang.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/wangyi.png" alt="">
+						</a>
+					</li> 					
+					<li>
+						<a href="javascript:;">
+							<img src="../img/fenghuang.png" alt="">
+						</a>
+					</li> 
+					<li>
+						<a href="javascript:;">
+							<img src="../img/baidu.png" alt="">
+						</a>
+					</li> 
+
+				</ul> 
+			</div>
+			 
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+</html>

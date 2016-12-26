@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/common.css"> 
+	<script src="../js/jquery-1.7.2.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header_contaiter"> 
+				<div class="hd_left">
+					<a href="javascript:;">
+						<img src="../img/logo.jpg" alt="">
+					</a> 
+				</div>
+				<ul class="hd_right">
+					<li><a class="nav_a " href="index.html">关于人人店</a></li> 
+					<li><a class="nav_a " href="shop.html">商城系统</a></li> 
+					<li><a class="nav_a " href="yingx.html">营销平台</a></li> 
+					<li><a class="nav_a active" href="javascript:;">人人分销</a></li> 
+					<li><a class="nav_a " href="javascript:;">用户中心</a></li> 
+				</ul> 
+		</div> 
+	</header>
+	<section>
+		<section>
+			<div class="main_img_box">
+				<img src="../img/main3.jpg" alt=""> 
+			</div>
+		</section> 
+	</section>  
+	<section>
+		<div class="con_contaiter">
+			<div class="con_server">
+				<h2 class="prod_h2"></h2>
+			</div> 
+			<div class="con_jj">
+				 <div class="con_jj_font"> 
+					<div>
+						<h4></h4>
+						<p> 
+							海云微分销是一个分销商城管理平台，使用海云微分销系统，人人都可以搭建属于 自己的个性化商城，含PC版，移动版和微信版
+							加入后，可一键创建商城，无需学习，无需成本，无需维护，无需进货发货
+							你需要通过自己的网站，APP，自媒体，QQ空间，朋友圈传播，就可以获得佣金 收益（按商品点击计费） 
+						</p>
+					</div> 
+				 </div>
+				 <div class="con_jj_img con_jj_img1"> 
+				 	<img src="../img/j1.png" alt="">
+				 </div>
+			</div>
+		</div> 
+		<div class="con_contaiter">
+			<div class="con_server">
+				<h2 class="prod_h2"></h2>
+			</div> 
+			 <div class="con_jj con_ys">
+			 	<div class="con_jj_img con_jj_img2"> 
+			 		<img src="../img/j2.png" alt="">
+			 	</div>
+			 	 <div class="con_jj_font "> 
+					<div>
+						 	<h4>
+						 		一键创建属于自己的个性化商城
+						 	</h4>
+							<p>
+								这年头，开个淘宝店也不容易，你需要会装修店铺，需要进货发货，需要24小时客服，需要为流量发愁，需要处理退货投诉
+								加入海云微分销，只需三步，即可拥有一个自己个性化的商城，动动手转发转发，即可获取佣金收益 
+							</p>
+					</div>
+			 	 </div>
+			 	 
+			 </div>
+			 <div class="con_jj">
+			 	 <div class="con_jj_font"> 
+			 	 	<div>
+			 	 		 	<h4>
+			 	 		 		朋友就是拿来“卖”的
+			 	 		 	</h4>
+			 	 			<p>
+			 	 				通过自媒体工具，传播你自己的商城，通过商品点击， 获取收益；粉丝，如今也可以变钱。
+			 	 				朋友就是拿来“卖”的，让朋友圈成为你的盈利工具。 
+			 	 			</p>
+			 	 	</div>
+			 	 	
+			 	 </div>
+			 	 <div class="con_jj_img con_jj_img1"> 
+			 	 	<img src="../img/j3.png" alt="">
+			 	 </div>
+			 </div>
+		</div> 
+		<div class="create_btn_box">
+			<div class="create_btn">
+				创建我的商城
+			</div>
+		</div>
+	</section>  
+	<footer>  
+		<div class="ft_box">
+			<div class="ft_font">
+				<ul class="ft_ul">
+					<li><a class="ft_a" href="index.html">首页</a>|</li>
+					<li><a class="ft_a" href="shop.html">商城系统</a>|</li>
+					<li><a class="ft_a" href="yingx.html">开放平台</a>|</li>
+					<li><a class="ft_a" href="rrfx.html">人人分销</a>|</li>
+					<li><a class="ft_a active" href="javascript:;">新闻动态</a>|</li>
+					<li><a class="ft_a" href="javascript:;">联系我们</a></li>
+				</ul> 
+				<div class="ft_call"> 
+					<img src="../img/call.jpg" alt="">
+				</div>
+			</div>  
+			<div class="ft_copy">
+				 ©Copyright 2015 苏州游创空间网络科技有限公司 | 苏ICP备15038170号-3 
+			</div>
+		</div>
+
+	</footer>
+</body>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+</html>
