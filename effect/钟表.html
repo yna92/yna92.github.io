@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>钟表</title>
+<style>
+.clock{
+    width:300px;
+    height:300px;
+    background:url(img/bg.png) no-repeat;
+    margin:150px auto;
+    position:relative; }
+.clock span{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform-origin:bottom;
+    border-radius:50% 50% 0 0;
+}
+.clock .h{
+    width:14px;
+    height:80px;
+    background:#000;
+    margin-top:-80px;
+     margin-left:-5px;
+ }
+.clock .m{
+    width:10px;
+    height:100px;
+    background:#000;
+    margin-top:-100px;
+    margin-left:-3px;
+ }
+.clock .s{
+    width:6px;
+    height:120px;
+    background:#f00;
+    margin-top:-120px;
+    margin-left:-1px;
+}
+.clock .tip{
+    width:20px;
+    height:20px;
+    background:-webkit-radial-gradient(#999,#000);
+    border-radius:50%; margin:-8px 0 0 -8px;
+}
+</style>
+<script>
+window.onload=function (){
+    var aS=document.querySelectorAll('span');
+
+    function clock(){
+        var oDate=new Date();
+        var oH=oDate.getHours();
+        var oM=oDate.getMinutes();
+        var oS=oDate.getSeconds();
+        var oMs=oDate.getMilliseconds();
+
+        //小时
+        aS[0].style.transform='rotate('+(oH%12*30+oM/60*30)+'deg)';
+        //分钟
+        aS[1].style.transform='rotate('+(oM*6+oS/60*6)+'deg)';
+        //秒
+        aS[2].style.transform='rotate('+(oS*6+oMs/1000*6)+'deg)';
+    }
+    clock();
+    setInterval(clock,30);
+};
+</script>
+</head>
+
+<body>
+    <div class="clock">
+        <span class="h"></span>
+        <span class="m"></span>
+        <span class="s"></span>
+        <span class="tip"></span>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
