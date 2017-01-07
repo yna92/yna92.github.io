@@ -27,7 +27,7 @@ header{
 .logo_a{
     display:block;
     width:1.6rem;
-    margin:0 auto;
+    margin:0.15rem auto;
 }
 .logo_a img{
     width:1.6rem;
@@ -88,7 +88,6 @@ header{
 .list_div img{
     width:0.8rem;
     height:0.8rem;
-
 }
 .list_span{
     width:0.4rem;
@@ -154,34 +153,35 @@ header{
     // background:url("../images/hot_1.png") no-repeat;
     background-size:1.8rem 1.2rem;
 }
-.hot_img_box:eq(1){
+.hot_img_box1{
+    background-size:1.8rem 1.2rem;
      background:url("../images/hot_1.png") no-repeat;
 }
-.hot_img_box:nth-of-type(2){
+.hot_img_box2{
      background:url("../images/hot_2.png") no-repeat;
 }
-.hot_img_box:nth-of-type(3){
+.hot_img_box3{
      background:url("../images/hot_3.png") no-repeat;
 }
-.hot_img_box:nth-of-type(4){
+.hot_img_box4{
      background:url("../images/hot_4.png") no-repeat;
 }
-.hot_img_box:nth-of-type(5){
+.hot_img_box5{
      background:url("../images/hot_5.png") no-repeat;
 }
-.hot_img_box:nth-of-type(6){
+.hot_img_box6{
      background:url("../images/hot_6.png") no-repeat;
 }
-.hot_img_box:nth-of-type(7){
+.hot_img_box7{
      background:url("../images/hot_7.png") no-repeat;
 }
-.hot_img_box:nth-of-type(8){
+.hot_img_box8{
      background:url("../images/hot_8.png") no-repeat;
 }
-.hot_img_box:nth-of-type(9){
+.hot_img_box9{
      background:url("../images/hot_9.png") no-repeat;
 }
-.hot_img_box:nth-of-type(10){
+.hot_img_box10{
      background:url("../images/hot_10.png") no-repeat;
 }
 
@@ -198,10 +198,12 @@ header{
      margin:0.22rem;
 }
 .des_2{
-    fonr-size:0.26rem;
+    font-size:0.26rem;
     line-height:1.2rem;
     font-weight:bold;
     color:#999;
+    margin-right:0.2rem;
+
 }
 .des_2 span{
     color:red;
@@ -224,6 +226,11 @@ header{
     height:3.52rem;
     background:#ff3900;
 }
+.shop_left img{
+     width:1.5rem;
+    height:3.52rem;
+
+}
 .shop_right{
     width:4.4rem;
     height:3.5rem;
@@ -243,6 +250,7 @@ header{
     color:#666;
     line-height:0.86rem;
     text-align:center;
+    font-size:0.26rem;
 }
 .sys_box li{
     width:2rem;

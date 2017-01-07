@@ -166,25 +166,25 @@ function a2d(n){
 		lineColor:'#f66',
 		ballColor:'#f66',
 		text:'html',
-		txt:'熟悉html，能够配合css完成兼容各种浏览器的页面'
+		txt:'掌握html，能够配合css完成兼容各种浏览器的页面'
 	},{
 		height:300,
 		lineColor:'#339',
 		ballColor:'#339',
 		text:'css',
-		txt:'熟悉css,能够完成无兼容问题的页面'
+		txt:'掌握css,能够完成无兼容问题的页面'
 	},{
 		height:320,
 		lineColor:'#069',
 		ballColor:'#069',
 		text:'JS',
-		txt:'熟悉JS，对JS的各大对象有深入了解，熟悉面向对象编程'
+		txt:'掌握JS，对JS的各大对象有深入了解，熟悉面向对象编程'
 	},{
 		height:200,
 		lineColor:'#06c',
 		ballColor:'#06c',
 		text:'nodeJs',
-		txt:'熟悉nodeJs，能够用node抓取网页数据，并别独立完成node搭建个人博客'
+		txt:'熟悉nodeJs，能够用node抓取网页数据，node搭建个人博客正在进行中'
 	},{
 		height:250,
 		lineColor:'#f90',
@@ -220,7 +220,7 @@ function a2d(n){
 		lineColor:'#f96',
 		ballColor:'#f96',
 		text:'c',
-		txt:'熟悉html，学校时期完成各种管理系统'
+		txt:'熟悉c，学校时期完成各种管理系统'
 	} ]
 	$(arr).each(function(){
 		$('<div class="oneSkill"><div class="oneLine"></div><div class="oneBall"></div><div class="oneTxt"></div></div>')
