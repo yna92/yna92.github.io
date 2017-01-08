@@ -41,6 +41,16 @@ li{
 #box4{
 	background: #ccf;
 }
+.logo{
+	width:100px;
+	height:50px;
+	float:left;
+	background:url(../img/logo.jpg) no-repeat 30px 10px;
+	background-size:30px 30px;
+}
+.logo img{
+	width:50px;
+}
 #logoBox{
 	width:100px;
 	height:100px;
@@ -543,10 +553,38 @@ li{
 	transform:translateY(150px) rotateX(-90deg);
 }
 #experience{
-	width:280px;
+	width:350px;
 	margin:200px auto;
+	position:relative;
 }
 #experience p{
 	font-size:16px;
 	font-weight:bold;
+	position:absolute;
+
+}
+#experience p:nth-child(1){
+	left:0px;
+    top:0;
+
+    color:#c03;
+    animation:introduce1 ease 1s;
+}
+#experience p:nth-child(2){
+	left:0px;
+    top:80px;
+    color:#906;
+    animation:introduce1 ease 2s;
+}
+#experience p:nth-child(3){
+	left:0px;
+    top:160px;
+    color:#039;
+    animation:introduce1 ease 3s;
+}
+
+@keyframes introduce1{
+	0%{ left:-1000px; }
+	90%{left:10px}
+	100%{ left:0px; }
 }

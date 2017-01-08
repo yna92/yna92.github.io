@@ -4,40 +4,136 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>聚划算</title>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<!-- <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function (){
+        var oUl=document.querySelector('.banner_box ul');
+        var oOl=document.querySelector('.ol_box ol');
+        var aLi=oUl.children;
+        var aOlLi=oOl.children;
+        var iNow=1;
+        var x=0;
+        var bOk=false;
+        x=-iNow*aLi[0].offsetWidth;
+        oUl.style.width = aLi.length*aLi[0].offsetWidth + 'px';
+        oUl.style.WebkitTransform='translate('+x+'px)';
+        var timer = setInterval(function(){
+            iNow++;
+            tab();
+        },2000)
+        function tab(){
+            oUl.style.transition = '1s ease all';
+
+            if(iNow <= -1){
+                oUl.style.transition = 'none';
+                iNow = aLi.length - 1;
+            }else if(iNow >= aLi.length-1){
+                oUl.style.transition = 'none';
+                iNow = 0;
+            }
+             x=-iNow*aLi[0].offsetWidth;
+            oUl.style.WebkitTransform='translateX('+x+'px)';
+            for(var i = 0;i < aOlLi.length;i++){
+                aOlLi[i].className = "";
+             }
+             if(iNow == 0){
+                aOlLi[aOlLi.length-1].className = "active";
+             }else if(iNow == aOlLi.length+1){
+                aOlLi[0].className = "active";
+             }else{
+                aOlLi[iNow-1].className = "active";
+             }
+        }
+        oUl.addEventListener('touchstart',function (ev){
+            if(bOk)return;
+            clearInterval(timer);
+            bOk=true;
+            var disX=ev.targetTouches[0].pageX-x;
+            var downX=ev.targetTouches[0].pageX;
+
+            oUl.style.WebkitTransition='1s all ease';
+            function fnMove(ev){
+                x=ev.targetTouches[0].pageX-disX;
+
+                oUl.style.WebkitTransform='translate('+x+'px)';
+            }
+            function fnEnd(ev){
+                document.removeEventListener('touchmove',fnMove,false);
+                document.removeEventListener('touchend',fnEnd,false);
+
+                var upX=ev.changedTouches[0].pageX;
+
+                if(Math.abs(upX-downX)>50){
+                    if(downX>upX){  //++
+                        iNow++;
+                    }else{          //--
+                        iNow--;
+                    }
+                }
+                tab();
+            }
+
+            function tEnd(){
+                bOk=false;
+                if(iNow==5){
+                    iNow=1;
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.transition='none';
+                    oUl.style.WebkitTransform='translateX('+x+'px)';
+                }
+                if(iNow==0){
+                    iNow=4;
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.transition='none';
+                    oUl.style.WebkitTransform='translateX('+x+'px)';
+                }
+                oUl.removeEventListener('transitionend',tEnd,false);
+            }
+
+            oUl.addEventListener('transitionend',tEnd,false);
+
+            document.addEventListener('touchmove',fnMove,false);
+            document.addEventListener('touchend',fnEnd,false);
+            ev.preventDefault();
+        },false);
+    },false);
+</script> -->
 </head>
 <body>
     <header >
-        <a class="logo_a" href="javascript:;"><img src="img/logo.jpg" alt="" /></a>
-        <a class="back_a"href=""><img src="img/back.jpg" alt="" /></a>
+        <a class="logo_a" href="javascript:;"><img src="images/logo.jpg" alt="" /></a>
+        <a class="back_a"href=""><img src="images/back.jpg" alt="" /></a>
     </header>
-    <section>
-        <div class="banner_box">
-            <ul class="clearfix">
-                <li><img src="img/main1.jpg" alt="" /></li>
-                <li><img src="img/main1.jpg" alt="" /></li>
-                <li><img src="img/main1.jpg" alt="" /></li>
-                <li><img src="img/main1.jpg" alt="" /></li>
-                <li><img src="img/main1.jpg" alt="" /></li>
-                <li><img src="img/main1.jpg" alt="" /></li>
-            </ul>
-        </div>
-        <div class="ol_box">
-            <ol class="clearfix">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
+    <section class="main_box">
+        <div class="swiper-container">
+                <div class="swiper-wrapper banner_box" >
+                    <div class="swiper-slide">
+                         <img src="images/main_1.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="images/main_2.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="images/main_3.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="images/main_4.png" alt="" />
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        <div class="ol_box swiper-pagination">
         </div>
     </section>
     <section>
         <div class="list_box">
             <ul class="clearfix">
                 <li>
-                    <a href="javscript:;">
+                    <a href="goods.html">
                         <div class="list_div">
                             <img src="images/class_1.png" alt="" />
                         </div>
@@ -45,7 +141,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javscript:;">
+                    <a href="life.html">
                         <div class="list_div">
                             <img src="images/class_2.png" alt="" />
                         </div>
@@ -53,7 +149,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javscript:;">
+                    <a href="brand.html">
                         <div class="list_div">
                             <img src="images/class_3.png" alt="" />
                         </div>
@@ -413,13 +509,19 @@
         </div>
         <div class="shop_list_box">
             <div class="title_bar">
-                更多划算 逛起来！
+                品牌折扣 逛起来！
             </div>
             <div class="clearfix">
                 <ul class=" clearfix sys_box">
-                    <li class="fl"><a href="javascript:;"></a></li>
-                    <li class="fl"><a href="javascript:;"></a></li>
-                    <li class="fl"><a href="javascript:;"></a></li>
+                    <li class="fl">
+                        <p>ios客户端</p>
+                    </li>
+                    <li class="fl">
+                        <p>安卓客户端</p>
+                    </li>
+                    <li class="fl">
+                        <p>意见反馈</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -434,6 +536,14 @@
     changeSize();
     win.addEventListener('resize',changeSize,false);
 })(window,document);
+var swiper1 = new Swiper('.swiper-container', {
+           pagination: '.swiper-pagination',
+           nextButton: '.swiper-button-next',
+           prevButton: '.swiper-button-prev',
+           slidesPerView: 1,
+           paginationClickable: true,
+           loop: true
+       });
 </script>
 </html>
 

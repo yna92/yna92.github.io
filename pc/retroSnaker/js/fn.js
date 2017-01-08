@@ -7,8 +7,8 @@ function init(){
 	oEat.style.top = randY+"px";
 	var aDiv =  oSnakeBorder.getElementsByTagName("div");
 	for( var i = 0;i<arr.length;i++){//设置蛇体的位置
-		aDiv[i+1].style.left = arr[i][0]+"px"; 
-		aDiv[i+1].style.top = arr[i][1]+"px"; 
+		aDiv[i+1].style.left = arr[i][0]+"px";
+		aDiv[i+1].style.top = arr[i][1]+"px";
 	}
 }
 
@@ -51,7 +51,7 @@ function moveProcess(){
 			arr[i][1]-=20;
 			if(arr[i][1] ==-20 ){
 				arr[i][1]=380;
-			}	
+			}
 			window.l = arr[i][0];
 			window.t = arr[i][1];
 
@@ -64,13 +64,13 @@ function moveProcess(){
 			window.t = arr[i][1];
 		}
 		else{
-			arr[i][0] = arr[i-1][0];	
-			arr[i][1] = arr[i-1][1];	
+			arr[i][0] = arr[i-1][0];
+			arr[i][1] = arr[i-1][1];
 		}
 	}
 		for(var i = 1;i<aDiv.length;i++){
-			aDiv[i].style.left = arr[i-1][0]+"px";	
-			aDiv[i].style.top = arr[i-1][1]+"px";							
+			aDiv[i].style.left = arr[i-1][0]+"px";
+			aDiv[i].style.top = arr[i-1][1]+"px";
 		}
 		aDiv[aDiv.length-1].style.display = 'block';
 
@@ -101,7 +101,7 @@ function move(){
 		countTime+=cTime;
 		if(l == randX&& t==randY){
 			window.oDiv = document.createElement("div");
-			oDiv.style.display = 'none';			
+			oDiv.style.display = 'none';
 			oSnakeBorder.appendChild(oDiv);
 			aDiv =  oSnakeBorder.getElementsByTagName("div");
 			arr.unshift([l,t]);
@@ -112,18 +112,17 @@ function move(){
 			oEat.style.top = randY+"px";
 			cTime-=10;
 			countEat++;
-			success();			
+			success();
 		}
-		fail();			
+		fail();
 		if(direction == "right"){
-			moveProcess();				
-		}else if(direction == "left"){	
-			moveProcess();			
-		}else if(direction == "top"){	
-			moveProcess();			
+			moveProcess();
+		}else if(direction == "left"){
+			moveProcess();
+		}else if(direction == "top"){
+			moveProcess();
 		}else if(direction == "bottom"){
-			 moveProcess();		
-			
+			 moveProcess();
 		}
 		showGrade(computedGrade());
 	},cTime)

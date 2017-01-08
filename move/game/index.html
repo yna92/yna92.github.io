@@ -7,16 +7,6 @@
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src="js/swiper.min.js"></script>
-
-<script>
-;(function (win,doc){
-    function changeSize(){
-        doc.documentElement.style.fontSize=50*doc.documentElement.clientWidth/320+'px';
-    }
-    changeSize();
-    win.addEventListener('resize',changeSize,false);
-})(window,document);
-</script>
 </head>
 
 <body>
@@ -208,6 +198,15 @@
     </div>
 </body>
 <script type="text/javascript">
+
+    ;(function (win,doc){
+        function changeSize(){
+            doc.documentElement.style.fontSize=50*doc.documentElement.clientWidth/320+'px';
+        }
+        changeSize();
+        win.addEventListener('resize',changeSize,false);
+    })(window,document);
+
     var swiper1 = new Swiper('.swiper-container', {
            pagination: '.swiper-pagination',
            nextButton: '.swiper-button-next',
