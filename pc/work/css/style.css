@@ -1,0 +1,1201 @@
+/*清零*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-size: 12px;
+    font-family: '\65B0\5B8B\4F53', '\5B8B\4F53', Verdana;
+    background:#fafafa;
+}
+ul, ol {
+    list-style-type: none;
+}
+select, input, img {
+    vertical-align: middle;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+a {
+    blr:expression(this.onFocus=this.blur())
+}
+a {
+    outline: none;
+}
+html {
+    overflow-x: hidden;
+    font-size:50px;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+
+body{
+    background-color:#11a9cc;
+    color:#fff;
+    font-size:13px;
+    font-family: open-sans,sans-serif;
+    line-height: 1.4;
+}
+.land{
+    height:90px;
+    // background-color:
+}
+
+/*导航条*/
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:2;
+}
+#nav{
+    min-height:80px;
+    text-align:center;
+    font-size:0;
+    background-color:#112a3f;
+    background-color:rgba(17,42,63,0.7);
+    position:relative;
+    tansition:0.5 ease all;
+    z-index:1;
+    width:100%;
+    top:-360px;
+    opacity:0.9;
+}
+#nav li{
+    display:inline-block;
+    border:2px solid #fff;
+    margin:10px 5px;
+    font-size:0px;
+    position:relative;
+    overflow:hidden;
+}
+#nav li a{
+    color:#fff;
+    padding:0px 7px;
+    height:31px;
+    line-height:31px;
+    font-size:16px;
+    font-family: Arial;
+    display:inline-block;
+}
+#nav li div{
+    position:absolute;
+    display:block;
+    width:100%;
+    height:31px;
+    top:35px;
+    left:0;
+    transition:0.3s ease-in all;
+    background: #9ad0e9;
+    opacity:0.6;
+}
+#nav li:hover div{
+    top:0;
+}
+#nav ul{
+    padding:10px 100px;
+}
+
+@media screen and  (max-width:500px){
+    #nav{
+        padding:80px 0;
+        background:rgb(14,34,53,0.7);
+    }
+    #nav ul{
+        padding:0;
+    }
+    #nav li{
+        font-size:0px;
+        display:block;
+        width:80%;
+        margin: 10px auto;
+    }
+    #nav li a{
+        color:#fff;
+        text-align:center;
+    }
+}
+#menu{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:5;
+    width:100px;
+    height:80px;
+}
+#menu .switch{
+    width:35px;
+    height:35px;
+    position:absolute;
+    top:20px;
+    left:20px;
+    overflow:hidden;
+}
+#menu .switch ul{
+    width:70px;
+    transition:0.3s ease all;
+}
+
+#menu .switch li{
+    width:35px;
+    height:35px;
+    float:left;
+    position:relative;
+}
+#menu .switch li{
+    background:url(../img/sprite-ui.png);
+}
+#menu .switch .open{
+    background-position: 0px 0px;
+}
+#menu .switch .close{
+    background-position: -186px -38px;
+}
+#menu .switch li div{
+    position:absolute;
+    display:block;
+    width:35px;
+    height:35px;
+    top:35px;
+    left:0;
+    transition:0.3s ease all;
+}
+#menu .switch li:hover div{
+    top:0;
+    background: #9ad0e9;
+    opacity: 0.6;
+}
+
+#home {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+#title{
+    position: relative;
+    z-index: 10;
+    left:50%;
+    margin-left:-175px;
+    width:380px;
+    height:85px;
+    top:120px;
+    color:#fff;
+    text-align: center;
+}
+#title h1{
+    font-size: 40px;
+    height:50px;
+}
+#title p{
+    font-size: 18px;
+    padding-top:10px;
+    height:21px;
+    font-family: Arial;
+    display: inline-block;
+}
+#main-box{
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform:translateY(469px);
+    position: absolute;
+    // height:180px;
+    height: 520px;
+}
+@media screen and (max-width: 1020px) and (min-width: 701px){
+    .box {
+        height: 520px;
+        transition: all 1s ease-out;
+    }
+}
+
+
+
+/*云*/
+#main-box #cloud{
+    background-color: #183c55;
+    overflow: hidden;
+    width:100%;
+    position: absolute;
+    height: 500px;
+    top: -500px;
+}
+#main-box #cloud div{
+    position: absolute;
+}
+#cloud .cloud-box1{
+    left:10%;bottom:60%
+}
+#cloud  .cloud1{
+    top:-20px; left:-66px; width:132px; height:40px; background-position:-298px -460px;
+}
+#cloud  .cloud-box2{
+    left:50%;bottom:80%
+}
+#cloud  .cloud2{
+   top:-15px; left:-52px; width:104px; height:30px; background-position:-298px -392px;
+}
+#cloud  .cloud-box3{
+    left:90%;bottom:50%
+}
+#cloud  .cloud3{
+    top:-18px; left:-77.5px; width:155px; height:36px; background-position:-298px -423px;
+}
+#cloud .cloud-box4{
+    left:15%;bottom:22%
+}
+#cloud .cloud4{
+    top:-12px; left:-48.5px; width:97px; height:24px; background-position:-298px -348px;
+}
+
+#cloud .cloud-box5{
+    left:40%;bottom:20%
+}
+#cloud .cloud5{
+   top:-12px; left:-35.5px; width:71px; height:24px; background-position:-396px -373px;
+}
+#cloud .cloud-box6{
+   left:60%;bottom:20%
+}
+#cloud .cloud6{
+  top:-9px; left:-41.5px; width:83px; height:18px; background-position:-298px -373px;
+}
+#cloud .cloud-box7{
+    left:85%; bottom:22%;
+}
+#cloud .cloud7{
+  top:-12px; left:-41.5px; width:83px; height:24px; background-position:-403px -398px;
+}
+
+#mountain div, #cloud div {
+    background: url(../img/sprite-primary.png);
+}
+
+/*山*/
+#main-box #mountain{
+    overflow: hidden;
+    width:100%;
+    height:165px;
+    position: absolute;
+    top:-165px;
+}
+#main-box #mountain .left{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -800px;
+    width: 629px;
+    height: 165px;
+    background-position: 0 -501px;
+}
+
+#main-box #mountain .center{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -221px;
+    width: 442px;
+    height: 115px;
+    background-position: 0 -666px;
+}
+#main-box #mountain .right{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: 171px;
+    width: 629px;
+    height: 165px;
+    background-position: 0 -501px;
+}
+
+#sea-top{
+    height:90px;
+    background-color:#4dbfd9;
+    text-align:center;
+}
+#sea-bottom{
+    background-color:#11a9cc;
+}
+#sea{
+    background-color:#11a9cc;
+    position:relative;
+    height:100%;
+}
+
+/*主要部分*/
+.wrap{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+}
+.part{
+    box-sizing:border-box;
+    width:165px;
+    transition: all 1s ease-out;
+    margin:0 10px;
+    text-align: center;
+    z-index:1;
+    position:relative;
+    height:260px;
+    position:absolute;
+    top:0;
+}
+.main-part{
+    position:absolute;
+    left:50%;
+}
+
+/*五个在一行*/
+@media screen and (min-width:1024px){
+    html{
+        overflow-y:auto;
+    }
+    .main-part{
+        margin-left:-462px;
+        width:925px;
+    }
+    #sea-bottom{
+        height:200px;
+    }
+    .p1{
+        left:0px;
+    }
+    .p2{
+        left:185px;
+    }
+    .p3{
+        left:370px;
+    }
+    .p4{
+        left:555px;
+    }
+    .p5{
+        left:740px;
+    }
+}
+/*四个在一行*/
+@media screen and (max-width:1023px) and (min-width:860px){
+    html{
+        overflow-y:auto;
+    }
+    .main-part{
+        margin-left:-370px;
+        width:740px;
+    }
+     #sea-bottom{
+        height:500px;
+    }
+    .p1{
+        left:0px;
+    }
+    .p2{
+        left:185px;
+    }
+    .p3{
+        left:370px;
+    }
+    .p4{
+        left:555px;
+    }
+    .p5{
+        top:270px;
+        left:277px;
+    }
+
+}
+/*三个在一行*/
+@media screen and (max-width:859px) and (min-width:680px){
+    html{
+        overflow-y:auto;
+    }
+    .main-part{
+        margin-left:-277px;
+        width:555px;
+    }
+     #sea-bottom{
+        height:500px;
+    }
+    .p1{
+        left:0px;
+    }
+    .p2{
+        left:185px;
+    }
+    .p3{
+        left:370px;
+    }
+    .p4{
+        top:270px;
+        left:92px;
+    }
+    .p5{
+        top:270px;
+        left:277px;
+    }
+}
+
+@media screen and (max-width:679px) and (min-width:530px){
+    html{
+        overflow-y:auto;
+    }
+    .main-part{
+        width:370px;
+        margin-left:-185px;
+    }
+     #sea-bottom{
+        height:740px;
+    }
+    .p1{
+        left:0px;
+    }
+    .p2{
+        left:185px;
+    }
+    .p3{
+        left:0px;
+        top:270px;
+    }
+    .p4{
+        left:185px;
+         top:270px;
+    }
+    .p5{
+        left:92px;
+        top:540px;
+    }
+}
+@media screen and (max-width:529px){
+    html{
+        overflow-y:auto;
+    }
+    .main-part{
+        width:185px;
+        margin-left:-92px;
+    }
+     #sea-bottom{
+        height:1280px;
+    }
+    .p1{
+        left:0px;
+    }
+    .p2{
+        left:0px;
+        top:270px;
+    }
+    .p3{
+        left:0px;
+        top:540px;
+    }
+    .p4{
+        left:0px;
+        top:810px;
+    }
+    .p5{
+        left:0px;
+        top:1080px;
+    }
+}
+
+
+
+
+.link{
+    position: absolute;
+    transform:translateX(20px) translateY(-190px);
+    height: 36px;
+    width: 100px;
+    z-index: 999;
+    text-align:center;
+}
+.link a{
+    display: block;
+    font:16px/36px Arial;
+    color:#999;
+    width:100%;
+    height:100%;
+    background:url('../img/sprite-ui.png') no-repeat;
+    background-position:-86px 0;
+    position:absolute;
+    z-index:2;
+}
+.arrow{
+    position:absolute;
+    width:26px;
+    height:39px;
+    background:url('../img/sprite-ui.png') no-repeat;
+    background-position:-58px 0;
+    transform:translateX(38px) translateY(16px);
+    z-index:1;
+}
+.link:hover a{
+    background-position:-187px 0;
+}
+.link:hover .arrow{
+    background-position:-287px 0;
+    transform:translateX(38px) translateY(13px);
+}
+.green{
+    background:url('../img/sprite-primary.png');
+    position: absolute;
+    top: -19px;
+    left: 0px;
+    width: 165px;
+    height: 19px;
+    background-position: 0px -274px;
+}
+.bottom{
+    background:url(../img/sprite-repeatx.png) no-repeat;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    background-position: 0px 0px;
+    top: 0px;
+    height: 51px;
+}
+.core {
+    position: absolute;
+    left: 0px;
+    height: 175px;
+    bottom: 23px;
+    overflow:hidden;
+    width: 100%;
+}
+
+.move{
+     transition:all 0.2s ease-out;
+}
+.ab-bg{
+    position:absolute;
+    background:url('../img/sprite-primary.png');
+}
+.ab{
+    position:absolute;
+}
+.bg{
+    background:url('../img/sprite-primary.png');
+}
+/*p1部分*/
+
+.bg00{
+    left:3px;
+    bottom:0;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+.bg01{
+    left:33px;
+    bottom:18px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+.con02{
+    bottom:0;
+    left:81px;
+    width:75px;
+    height:156px;
+}
+.con03{
+    width:59px;
+    height:34px;
+    background-color: #f3f3f4;
+    left:8px;
+    bottom:96px;
+}
+.bg03{
+    width:23px;
+    height:23px;
+    background-position: -82px -248px;
+    left:0px;
+    animation:eye 10s infinite ease-in;
+    position:absolute;
+}
+@-webkit-keyframes eye{
+        0%{
+            transform:translateX(10px,0px);
+        }
+        10%{
+            transform:translateX(10px,0px);
+        }
+        20%{
+            transform:translateX(20px,0px);
+        }
+        30%{
+            transform:translateX(20px,0px);
+            }
+        40%{
+            transform:translate(34px,3px);
+            }
+        50%{
+            transform:translate(34px,3px);
+            }
+        60%{
+            transform:translate(20px,8px);
+            }
+        70%{
+            transform:translate(20px,8px);
+            }
+        80%{
+            transform:translate(10px,5px);
+            }
+        90%{
+            transform:translate(0px,4px);
+            }
+        100%{
+            transform:translate(0px,0px);
+            }
+}
+
+.bg04{
+    bottom:-94px;
+    background-position: -0px -93px;
+    width: 75px;
+    position: absolute;
+    bottom: 0;
+    height: 156px;
+}
+.bg05{
+    left: 55px;
+    bottom: 0;
+    z-index: 2;
+    height:103px;
+    width:35px;
+    background-position:-145px 0px;
+}
+.bg06{
+    left: 91px;
+    bottom: 0;
+    z-index: 2;
+    width:36px;
+    height:92px;
+    background-position: -77px 0px;
+}
+.bg07{
+    left: 127px;
+    bottom: 0;
+    z-index: 4;
+    width:30px;
+    height:66px;
+    background-position: -114px 0px;
+}
+.bg08{
+    left: 40px;
+    bottom: 0;
+    z-index: 4;
+    width:76px;
+    height:86px;
+    background-position: 0 0;
+}
+.pic{
+    width:44px;
+    height:44px;
+    position:absolute;
+    left:23px;
+    top:0;
+    overflow:hidden;
+}
+.pic .picTop{
+    transition:all 0.6s ease-out;
+    width:220px;
+    height:22px;
+    background-position: -298px 0;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+.pic .picBottom{
+    width:220px;
+    height:22px;
+    background-position: -298px -22px;
+    transition:all 0.6s 1s ease-out;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.bg10{
+    left: 3px;
+    bottom: 18px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+.bg11{
+    left: 150px;
+    bottom: 0px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+.bg12{
+    left: 10px;
+    bottom: 0px;
+    width:44px;
+    height:110px;
+    background-position: -85px -294px;
+}
+.bg13{
+    left: 77px;
+    bottom: 0px;
+    width:16px;
+    height:117px;
+    background-position: -181px 0px;
+}
+.bg14{
+    left: 88px;
+    bottom: 0px;
+    z-index: 3;
+    width:38px;
+    height:135px;
+    background-position: -259px 0px;
+}
+
+.bg14{
+    left: 88px;
+    bottom: 0px;
+    z-index: 3;
+    width:38px;
+    height:135px;
+    background-position: -259px 0px;
+}
+
+
+.bg15{
+    bottom: 25px;
+    left: 9px;
+    animation:music 20s infinite ease-out;
+    transform: translateY(-40px);
+    width:20px;
+    height:6px;
+    background-position: -519px 0px;
+}
+@-webkit-keyframes music {
+        0%{
+            transform:translateY(-100px);
+        }
+        10%{
+            transform:translateY(-30px);
+        }
+        20%{
+            transform:translateY(-30px);
+        }
+        30%{
+            transform:translateY(-90px);
+            }
+        40%{
+            transform:translateY(-90px);
+            }
+        50%{
+            transform:translateY(-60px);
+            }
+        60%{
+            transform:translateY(-60px);
+            }
+        70%{
+            transform:translateY(-20px);
+            }
+        80%{
+            transform:translateY(-20px);
+            }
+        90%{
+            transform:translateY(0px);
+            }
+        100%{
+            transform:translateY(0px);
+            }
+
+}
+
+
+.bg16{
+    bottom: 0px;
+    left: 121px;
+    width:26px;
+    height:80px;
+    background-position: -144px -186px;
+}
+
+.bg17{
+    bottom: 0px;
+    left: 58px;
+    z-index: 2;
+    height:67px;
+    background-position: -144px -118px;
+    width:46px;
+}
+
+.bg18{
+    left: 65px;
+    bottom: 60px;
+    width:77px;
+    height:102px;
+    background-position: -303px -231px;
+}
+
+.bg20{
+    left: 127px;
+    bottom: 18px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+
+.bg21{
+    left: 145px;
+    bottom: 4px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+
+.bg22{
+    left: 118px;
+    bottom: 0px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+.con23{
+    left: 27px;
+    width: 80px;
+    height: 153px;
+    bottom: 0px;
+}
+.con24{
+   bottom:81px;
+   width:64px;
+   height:44px;
+   background-color:#9ad0e9;
+}
+.of{
+    width:58px;
+    height:44px;
+    overflow:hidden;
+    left:4px;
+    position:absolute;
+}
+.bg24{
+    width:58px;
+    height:44px;
+    top:0;
+    background-position: -96px -448px;
+    transform:translateY(0%);
+    transition:all 0.3s ease-out;
+}
+
+.bg25{
+    z-index: 2;
+    top: -28px;
+    height:153px;
+    width:80px;
+    background-position:0px -294px;
+}
+
+.bg26{
+    bottom: 0px;
+    left: 0px;
+    width:42px;
+    height:62px;
+    background-position: -171px -196px;
+}
+.bg27{
+    left: 50px;
+    bottom: 0px;
+    z-index: 2;
+    width:36px;
+    height:70px;
+    background-position: -198px 0px;
+}
+.con28{
+    left:86px;
+    width: 29px;
+    height:58px;
+    bottom: 0px;
+    z-index:2;
+}
+.con29{
+    left:86px;
+    bottom: 0px;
+    z-index:2;
+    width: 29px;
+    height: 58px;;
+    left: 0px;
+    overflow: hidden;
+    border-radius: 5px;
+    bottom: 0px;
+    background-color: rgb(154,208,233);
+}
+.bg29{
+    background-position: -37px -448px;
+    transition:all 0.6s ease-out;
+    height: 44px;
+    width: 58px;
+    position: absolute;
+    bottom: 9px;
+}
+.bg200{
+    left: 0px;
+    width: 29px;
+    width: 29px;
+    height:58px;
+    background-position: -191px -118px;
+}
+
+.bg201{
+    left: 34px;
+    bottom: 0px;
+    z-index: 1;
+    width: 16px;
+    height:42px;
+    background-position: -198px -71px;
+}
+.bg30{
+    left: 148px;
+    bottom: 12px;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+
+.bg31{
+    left: 18px;
+    bottom: 0px;
+    width:23px;
+    height:85px;
+    background-position: -235px 0px;
+}
+
+.bg32{
+    left: 10px;
+    bottom: 0px;
+    width:29px;
+    height:46px;
+    background-position: -84px -93px;
+}
+
+.bg33{
+    left: 69px;
+    bottom: 0px;
+    width:29px;
+    height:70px;
+    background-position: -114px -67px;
+}
+
+.bg34{
+    left: 98px;
+    bottom: 0px;
+    width:12px;
+    height:44px;
+    background-position: -215px -71px;
+}
+.con35{
+    left: 110px;
+    bottom: 0px;
+    width: 36px;
+    height:84px;
+}
+.bg35{
+    width:36px;
+    height:84px;
+    background-position: -221px -117px;
+}
+.date{
+    position: absolute;
+    z-index: 20;
+    width:36px;
+    height:868px;
+    background:url(
+    '../img/sprite-nv-special.png') no-repeat;
+    top: 0;
+}
+.con35Text{
+    width:36px;
+    height:28px;
+    overflow:hidden;
+    top:14px;
+}
+.bg33{
+    width:29px;
+    height:70px;
+    background-position: -114px -67px;
+}
+
+.bg36{
+    left: 116px;
+    bottom: 0px;
+    width:24px;
+    height:16px;
+    background-position: -228px -86px;
+}
+
+.bg37{
+    left: 35px;
+    bottom: 0px;
+    width:38px;
+    height:173px;
+    background-position: -259px -136px;
+}
+.bg40{
+    left: 113px;
+    bottom: 18px;
+    z-index: 1;
+    width:13px;
+    height:18px;
+    background-position: -207px -177px;
+}
+.bg41{
+    left: 12px;
+    bottom: 0px;
+    width:139px;
+    height:134px;
+    background-position: -158px -366px;
+}
+
+.bg42{
+    left: 98px;
+    bottom: 0px;
+    width:12px;
+    height:44px;
+    background-position: -215px -71px;
+}
+
+.con43{
+    left: 37px;
+    bottom: 0px;
+    width: 66px;
+    height:151px;
+}
+.bg43{
+    background-position: -77px -146px;
+    bottom:0;
+    width:66px;
+    height: 101px;
+}
+.con44{
+    left: 0px;
+    bottom: 60px;
+    width: 66px;
+    height:66px;
+}
+.bg44{
+    background-position: -551px 0px;
+    width:66px;
+    height: 66px;
+    animation:rotate 10s infinite ease-out;
+}
+@-webkit-keyframes rotate {
+    0%{
+        transform:rotate(10deg);
+    }
+    10%{
+        transform:rotate(10deg);
+    }
+    20%{
+        transform:rotate(30deg);
+    }
+    30%{
+        transform:rotate(30deg);
+        }
+    40%{
+        transform:rotate(-20deg);
+        }
+    50%{
+        transform:rotate(-50deg);
+        }
+    60%{
+        transform:rotate(-40deg);
+        }
+    70%{
+        transform:rotate(-30deg);
+    }
+    80%{
+        transform:rotate(-30deg);
+        }
+    90%{
+        transform:rotate(20deg);
+        }
+    100%{
+        transform:rotate(10deg);
+        }
+
+
+}
+.con45{
+    left: 10px;
+    bottom: 0px;
+    width: 56px;
+    height:42px;
+}
+.bg45{
+    background-position: -144px -294px;
+    width:56px;
+    height: 38px;
+    bottom:0;
+}
+.bg46{
+    left: 10px;
+        bottom: 0px;
+    transition:all 0.4s ease-out;
+    background-position: 0px -448px;
+    width:36px;
+    height: 42px;
+}
+.bg47{
+    left: 0px;
+    bottom: 0px;
+    background-position: -144px -333px;
+    width:56px;
+    height: 31px;
+}
+/*飞机*/
+.air{
+    width:150%;
+    height: 46px;
+    z-index:1;
+    top:-220px;
+    left:0;
+    position:absolute;
+}
+.air .plane{
+    left:-10%;
+    width: 62px;
+    height: 46px;
+    background-position: -488px -45px;
+    animation:fly 30s infinite  linear;
+    transform-origin:bottom;
+    transition:2s all ease;
+}
+@-webkit-keyframes fly{
+    0%{
+        left:-10%;
+    }
+    100%{
+       left:100%;
+    }
+}
+
+
+
+
