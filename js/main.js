@@ -48,7 +48,7 @@ function changeMain(t){
 		top:t
 	},{
 		easing:'ease-out',
-		duration:1000,
+		duration:600,
 		complete:function(){
 			if(t/$(window).height() == -4){
 				$('.allSkill').css('top','0px');
@@ -82,45 +82,45 @@ function fnWheel(){
  		}
  	})
  }
-//  fnWheel();
-//  $('#box0').css({background:'#ff6'});
-//  $('#nav').show();
-// $('#Introduce').show();
+ fnWheel();
+ $('#box0').css({background:'#22c3aa'});
+ $('#nav').show();
+$('#Introduce').show();
 // 开始加载动画
-;(function(){
-	setTimeout(function(){
-		$('#logoBox img').animate({
-			opacity:0
-		},function(){
-			$('#logoBox').animate({
-				width:'2000px',
-				height:'2000px',
-				left:-(2000- $(window).width())/2,
-				top:-(2000- $(window).height())/2,
-			},3000,function(){
-				$('#logoBox').css({
-					'left':0,
-					'top':0,
-					'border-radius':0,
-					'width':$(window).width()+'px',
-					'height':$(window).height()+'px',
-					'margin-left':0,
-					'margin-top':0
-				});
-				$('#box0').css({background:'#ff6'});
-				$('#nav').show();
-				$('#Introduce').show();
-				$('#logoBox').animate({
-					opacity:0
-				},500,function(){
-					$('#logoBox').remove();
-				})
-				//动画加载完成，加载滚轮事件
-				fnWheel();
-			})
-		});
-	},1000);
-})();
+// ;(function(){
+// 	setTimeout(function(){
+// 		$('#logoBox img').animate({
+// 			opacity:0
+// 		},function(){
+// 			$('#logoBox').animate({
+// 				width:'2000px',
+// 				height:'2000px',
+// 				left:-(2000- $(window).width())/2,
+// 				top:-(2000- $(window).height())/2,
+// 			},3000,function(){
+// 				$('#logoBox').css({
+// 					'left':0,
+// 					'top':0,
+// 					'border-radius':0,
+// 					'width':$(window).width()+'px',
+// 					'height':$(window).height()+'px',
+// 					'margin-left':0,
+// 					'margin-top':0
+// 				});
+// 				$('#box0').css({background:'#22c3aa'});
+// 				$('#nav').show();
+// 				$('#Introduce').show();
+// 				$('#logoBox').animate({
+// 					opacity:0
+// 				},500,function(){
+// 					$('#logoBox').remove();
+// 				})
+// 				//动画加载完成，加载滚轮事件
+// 				fnWheel();
+// 			})
+// 		});
+// 	},1000);
+// })();
 //导航菜单
 function navMouseOut(){
 	var index = -$('#ul1').offset().top/$(window).height();
@@ -162,53 +162,53 @@ function a2d(n){
 
 ;(function(){
 	var arr = [{
-		height:300,
+		height:320,
 		lineColor:'#f66',
 		ballColor:'#f66',
-		text:'html',
-		txt:'掌握html，能够配合css完成兼容各种浏览器的页面'
+		text:'XHTML/CSS',
+		txt:'熟练掌握XHTML/CSS，能够相互配合完成兼容各种浏览器的页面'
 	},{
 		height:300,
 		lineColor:'#339',
 		ballColor:'#339',
-		text:'css',
-		txt:'掌握css,能够完成无兼容问题的页面'
+		text:'HTML5/CSS3',
+		txt:'熟练掌握HTML5/CSS3,能够实现各种CSS3动画，和各种移动端布局'
 	},{
 		height:320,
 		lineColor:'#069',
 		ballColor:'#069',
 		text:'JS',
-		txt:'掌握JS，对JS的各大对象有深入了解，熟悉面向对象编程'
+		txt:'掌握JavaScript，对JavaScript的各大对象有深入了解，熟练掌握JQuery、Zepto库、熟悉面向对象、模块化开发'
 	},{
 		height:200,
 		lineColor:'#06c',
 		ballColor:'#06c',
-		text:'nodeJs',
-		txt:'熟悉nodeJs，能够用node抓取网页数据，node搭建个人博客正在进行中'
+		text:'node.js',
+		txt:'熟悉node.js，能够用node抓取网页数据，node.js搭建个人博客'
 	},{
-		height:250,
+		height:280,
 		lineColor:'#f90',
 		ballColor:'#f90',
 		text:'ajax',
-		txt:'熟悉ajax，独立完成过微博发表，许愿墙等数据交互'
+		txt:'熟练掌握AJAX、JSONP,独立完成过微博发表,许愿墙等小项目,获取百度搜索数据等交互案例'
 	},{
-		height:200,
+		height:250,
 		lineColor:'#f60',
 		ballColor:'#f60',
-		text:'angular',
-		txt:'熟悉angular，--------'
+		text:'vue.js',
+		txt:'熟悉vue.js，使用vue.js完成外卖app开发，了解AngularJs、react.js'
 	},{
 		height:200,
 		lineColor:'#09c',
 		ballColor:'#09c',
-		text:'vue',
-		txt:'熟悉vue，--------'
+		text:'grunt',
+		txt:'熟悉webpack配置，用其打包外卖app，了解grunt、gulp等前端自动化构建工具'
 	},{
 		height:50,
 		lineColor:'#f66',
 		ballColor:'#f66',
 		text:'php',
-		txt:'了解php，了解php的基本语法'
+		txt:'了解php，了解php的基本语法和简单语句'
 	},{
 		height:80,
 		lineColor:'#fc3',
@@ -220,7 +220,7 @@ function a2d(n){
 		lineColor:'#f96',
 		ballColor:'#f96',
 		text:'c',
-		txt:'熟悉c，学校时期完成各种管理系统'
+		txt:'熟悉c语言，学校时期完成各种管理系统'
 	} ]
 	$(arr).each(function(){
 		$('<div class="oneSkill"><div class="oneLine"></div><div class="oneBall"></div><div class="oneTxt"></div></div>')
@@ -396,53 +396,7 @@ function a2d(n){
 	}
 
 })();
-//立方体
-// ;(function(){
-// 	var oBox = document.querySelector(".cubeBox");
-// 	var x = 0;
-// 	var y = 0;
-// 	var iSpeedX = 0;
-// 	var iSpeesY = 0;
-// 	var lastX = 0;
-// 	var lastY = 0;
 
-// 	oBox.onmousedown = function(ev){
-// 		 var disX = ev.clientX - x;
-// 		 var disY = ev.clientY - y;
-// 		 document.onmousemove = function(ev){
-// 		 	x = ev.clientX - disX;
-// 		 	y = ev.clientY - disY;
-// 		 	oBox.style.transform = 'perspective(800px) rotateX('+-(y)+'deg) rotateY('+(x)+'deg)';
-// 		 	iSpeedX = ev.clientX - lastX;
-// 		 	iSpeedY = ev.clientY - lastY;
-
-// 		 	lastX = ev.clientX;
-// 		 	lastY = ev.clientY;
-// 		 }
-// 		 document.onmouseup = function(){
-// 		 	document.onmousemove=null;
-// 		 	document.onmouseup=null;
-
-// 		 	oBox.timer=setInterval(function (){
-// 		 		iSpeedX*=0.8;
-// 		 		iSpeedY*=0.8;
-
-// 		 		x+=iSpeedX;
-// 		 		y+=iSpeedY;
-// 		 		oBox.style.transform='perspective(800px) rotateX('+-(y)+'deg) rotateY('+(x)+'deg)';
-
-// 		 		if(Math.abs(iSpeedX)<1)iSpeedX=0;
-// 		 		if(Math.abs(iSpeedY)<1)iSpeedY=0;
-
-// 		 		if(iSpeedX==0&&iSpeedY==0){
-// 		 			clearInterval(oBox.timer);
-// 		 		}
-// 		 	},16);
-
-// 		 }
-// 		return false;
-// 	}
-// })();
 
 
 

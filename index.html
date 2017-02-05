@@ -5,7 +5,6 @@
 	<title>杨娜个人站</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="icon" href="img/logo.jpg" type="image/x-icon">
 	<style id="css"></style>
 </head>
@@ -17,12 +16,12 @@
 		</div>
 		<div id="nav">
 			<div class="logo">
-			<!-- <a href="">博客</a> -->
+				<a href="http://www.jianshu.com/u/070d280111cb">简书</a>
 			</div>
 			<ul id="navUl">
 				<li>首页</li>
-				<li>pc端作品</li>
-				<li>移动端作品</li>
+				<li>自我介绍</li>
+				<li>作品</li>
 				<li>特效</li>
 				<li>专业技能</li>
 				<li id = 'pos'></li>
@@ -30,10 +29,147 @@
 		</div>
 		<ul id="ul1">
 			<li class="box" id="box0">
-				<div id="logoBox">
+				<!-- <div id="logoBox">
 					<img src="img/logo.jpg" alt="">
+				</div> -->
+				<div class="pLogoBox"><img src="img/logo2.jpg" alt="" /></div>
+				<div class="detailBox">
+					<p>杨娜</p>
+					<p>电话：18333158306</p>
+					<p>邮箱：yna_bj@163.com</p>
+					<p>要开始就要停止动口，马上动手</p>
 				</div>
-				<div id="Introduce">
+			</li>
+			<li class="box" id="box1">
+				<div id="introRight">
+					<div class="perData" class="animated bounceInLeft">
+						<h2>个人资料</h2>
+					    <div>
+					    	<span>姓名：杨娜</span>
+					        <div>
+					        	<span>年龄：25</span>
+					            <div>
+					            	<span>学历：统招本科</span>
+					                <div>
+					                	<span>毕业院校：河北地质大学 </span>
+					                    <div>
+					                    	<span>专业：计算机科学与技术 </span>
+					                        <div>
+					                        	<span>英语水平：四级 </span>
+					                            <div style="">
+					                            	<span>所获奖励：多次获得学校一等奖学金 </span>
+					                            	<div style="">
+					                            		<span>工作经验：2年</span>
+					                            	</div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</li>
+			<li class="box" id="box2">
+				<div>
+					<div class="title">
+						<h3 class="textCenter">
+							作品
+						</h3>
+					</div>
+					<div id="moveBox">
+						<ul>
+							个人作品
+							<li>
+								<a href="pc/work/index.html">
+									 <span>关键字</span><br />
+									 HTML5、CSS3、JavaScript、响应式、动画
+								</a>
+							</li>
+						</ul>
+						<ul>
+							外卖app
+							<li>
+								<a href="javascript:;">
+									<span>关键字</span><br />
+									Vue.js、Vue.li、Vue.router、better-scroll、webpack、Stylus、es6、eslint、flex布局、贝赛尔曲线
+								</a>
+							</li>
+						</ul>
+						<ul>
+							捕鱼达人
+							<li>
+								<a href="pc/fish/code/index.html">
+									<span>关键字</span><br />
+									canvas、面向对象
+								</a>
+							</li>
+						</ul>
+						<ul>
+							大数医达
+							<li>
+								<a href="move/doctor/index.html">
+									<span>关键字</span><br />
+									HTML5、CSS3、JavaScript、sWiper、rem布局
+								</a>
+							</li>
+						</ul>
+						<ul>
+							模拟电梯
+							<li>
+								<a href="mpc/lift/index.html">
+									<span>关键字</span><br />
+									XHTML、CSS、JavaScript、模拟真实电梯响应、逻辑
+								</a>
+							</li>
+						</ul>
+						<ul>
+							贪吃蛇
+							<li>
+								<a href="pc/retroSnaker/index.html">
+									<span>关键字</span><br />
+									XHTML/CSS、JavaScript、简易贪吃蛇、逻辑
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</li>
+			<li class="box" id="box3">
+				<div>
+					<div class="title">
+						<h3 class="textCenter">
+							特效
+						</h3>
+					</div>
+					<div class="effect">
+						<ul id="picList">
+						</ul>
+						<ol id="eBtns">
+						    <li class="active">1</li>
+						    <li>2</li>
+						    <li>3</li>
+						    <li>4</li>
+						</ol>
+					</div>
+				</div>
+
+			</li>
+			<li class="box" id="box4"></li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+
+</html>
+
+
+
+<!-- <div id="Introduce">
 					<div id="introLeft">
 					<div id="experience">
 						<p>学校经历：2012-2016在河北地质大学完成大学学习，在学校期间成绩优异，运用Pascal,C,Java的语言完成过各种管理系统。</p>
@@ -75,146 +211,4 @@
 						    </div>
 						</div>
 					</div>
-				</div>
-			</li>
-			<li class="box" id="box1">
-				<div>
-					<div class="title">
-						<h3 class="textCenter">
-							pc端作品
-						</h3>
-					</div>
-					<ul id="circleUl">
-						<li>
-							<div class="face">
-								<a href="pc/work/index.html">代表作品</a>
-							</div>
-							<div class="back">
-								<a href="pc/work/index.html">
-								关键字：HTML5、CSS3、JavaScript、响应式、动画
-								</a>
-							</div>
-						</li>
-						<li>
-							<div class="face">
-								<a href="pc/lift/index.html">模拟电梯</a>
-							</div>
-							<div class="back">
-								<a href="pc/lift/index.html">
-								关键字：HTML、CSS、JavaScript、模拟真实电梯响应、逻辑
-								</a>
-							</div>
-						</li>
-						<li>
-							<div class="face">
-								<a href="pc/retroSnaker/index.html">贪吃蛇</a>
-							</div>
-							<div class="back">
-								<a href="pc/retroSnaker/index.html">
-									关键字：HTML/CSS、JavaScript、简易贪吃蛇、逻辑
-								</a>
-							</div>
-						</li>
-						<li>
-							<div class="face">
-								<a href="pc/shop/html/index.html">人人店</a>
-							</div>
-							<div class="back">
-								<a href="pc/shop/html/index.html">
-									关键字：HTML5、CSS3、jQuery、官网
-								</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="box" id="box2">
-				<div>
-					<div class="title">
-						<h3 class="textCenter">
-							移动端作品
-						</h3>
-					</div>
-					<div id="moveBox">
-						<ul>
-							聚划算
-							<li>
-								<a href="move/jhs/index.html">
-									关键字：HTML5、CSS3、布局
-								</a>
-							</li>
-						</ul>
-						<ul>
-							大数医达
-							<li>
-								<a href="move/doctor/index.html">
-									关键字：HTML5、CSS3、JavaScript、sWiper
-								</a>
-							</li>
-						</ul>
-						<ul>
-							玩机岛
-							<li>
-								<a href="move/game/index.html">
-									关键字:布局
-								</a>
-							</li>
-						</ul>
-						<ul>
-							作品名
-							<li>
-								<a href="javascript:;">
-									作品名
-								</a>
-							</li>
-						</ul>
-						<ul>
-							作品名
-							<li>
-								<a href="javascript:;">
-									作品名
-								</a>
-							</li>
-						</ul>
-						<ul>
-							作品名
-							<li>
-								<a href="javascript:;">
-									作品名
-								</a>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-			</li>
-			<li class="box" id="box3">
-				<div>
-					<div class="title">
-						<h3 class="textCenter">
-							特效
-						</h3>
-					</div>
-					<div class="effect">
-						<ul id="picList">
-						</ul>
-						<ol id="eBtns">
-						    <li class="active">1</li>
-						    <li>2</li>
-						    <li>3</li>
-						    <li>4</li>
-						</ol>
-					</div>
-				</div>
-
-			</li>
-			<li class="box" id="box4"></li>
-		</ul>
-	</div>
-</body>
-<script src="js/jquery-1.7.2.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/main.js"></script>
-
-</html>
+				</div> -->

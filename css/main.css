@@ -25,7 +25,6 @@ li{
 }
 #box0{
 	background: #000;
-	/*background: #ff6;*/
 	position: relative;
 }
 #box1{
@@ -42,11 +41,21 @@ li{
 	background: #ccf;
 }
 .logo{
-	width:100px;
+	width:120px;
 	height:50px;
 	float:left;
 	background:url(../img/logo.jpg) no-repeat 30px 10px;
 	background-size:30px 30px;
+}
+.logo a{
+	font-size:16px;
+	display:block;
+	line-height:50px;
+	height:50px;
+	text-decoration: none;
+	margin-left:80px;
+	color:#333;
+	cursor:pointer;
 }
 .logo img{
 	width:50px;
@@ -94,7 +103,7 @@ li{
 #pos{
  position:absolute;
  left:0; top:0;
-  background:#ff6;
+  background:rgb(34, 195, 170);
   z-index:-1;
 
 }
@@ -231,30 +240,35 @@ li{
  	  color: #fff;
  	  text-align:center;
   }
- #moveBox li{
+ #moveBox ul li{
  	position:absolute;
  	left:0;
  	top:-160px;
- 	width:200px;
- 	height:160px;
+ 	width:190px;
+ 	height:140px;
  	background:#6cf;
- 	line-height:160px;
  	text-align: center;
  	color: #fff;
- 	font-size: 26px;
+ 	padding:10px 5px;
  }
  #moveBox ul li a{
 	posiotion:absolute;
 	display:block;
-	width:200px;
-	height:160px;
+	width:190px;
+ 	height:140px;
 	top:0;
 	left:0;
 	text-decoration: none;
-	line-height:36px;
-	font-size:20px;
+	line-height:18px;
+	font-size:14px;
 	text-align:center;
+	color: #333;
 }
+ #moveBox ul li a span{
+ 	color:#fff;
+ 	font-size:16px;
+ 	paddind: 5px 0;
+ }
  .allSkill{
  	margin:0 50px;
  	width:100%;
@@ -282,16 +296,17 @@ li{
 	background: blue;
 }
 .oneBall{
-	width:80px;
-	height:80px;
+	width:90px;
+	height:90px;
 	border-radius: 50%;
 	background:green;
 	opacity: 0;
 	text-align: center;
-	line-height: 80px;
+	line-height: 90px;
 	color: #fff;
-	font-size: 16px;
+	font-size: 14px;
 	cursor: pointer;
+	font-weight:bold;
 }
 #circleUl li{
 	position: relative;
@@ -381,18 +396,15 @@ li{
 }
 
 .perData{
-	width:240px;
-	// margin:80px auto;
+	width:340px;
 	position:relative;
 	-webkit-perspective:800px;
-	float:right;
-	right:30px;
-	top:80px;
+	margin: 80px auto 0 auto;
 }
 .perData h2{
 	height:42px;
-	width:240px;
-	background:#F60;
+	width:340px;
+	background:rgb(34, 195, 170);
 	color:#fff;
 	font: bold 16px/42px "微软雅黑";
 	text-align:center;
@@ -593,4 +605,67 @@ li{
 	0%{ left:-1000px; }
 	90%{left:10px}
 	100%{ left:0px; }
+}
+.pLogoBox{
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	margin:100px auto 0 auto;
+	overflow:hidden;
+	transition: .5s ease all;
+}
+.pLogoBox:hover{
+	-webkit-box-shadow:0 0 20px #ccc;
+	 -moz-box-shadow:0 0 20px #ccc;
+	 box-shadow:0 0 20px #ccc;
+}
+.detailBox{
+	width:600px;
+	height:300px;
+	margin:20px auto;
+	text-align:center;
+}
+.detailBox p{
+	margin:10px 0;
+	font-family: '楷体';
+	font-size:18px;
+	transition:1s ease all;
+	color: #eef3f0;
+}
+
+
+.detailBox p:nth-child(1){
+	text-shadow: 1px 2px #22c3aa,2px 4px #aee2d9;
+	text-align: center;
+	font-size:48px;
+	font-family: ' Lato,"Microsoft YaHei",sans-serif;';
+	animation:pmove1 ease 1s;
+}
+.detailBox p:nth-child(2){
+	animation:pmove2 ease 1s 0.5s;
+}
+.detailBox p:nth-child(3){
+	animation:pmove3 ease 1s 1s;
+}
+.detailBox p:nth-child(4){
+	font-size:18px;
+	font-weight:200;
+	font-family: ' Lato,"Microsoft YaHei",sans-serif;';
+	animation:pmove4 ease 1s 1.5s;
+}
+@keyframes pmove1{
+	0%{ margin-left:-1000px; }
+	100%{ margin-left:0px; }
+}
+@keyframes pmove2{
+	0%{ margin-left:-1000px; }
+	100%{ margin-left:0px; }
+}
+@keyframes pmove3{
+	0%{ margin-left:-1000px; }
+	100%{ margin-left:0px; }
+}
+@keyframes pmove4{
+	0%{ margin-left:-1000px; }
+	100%{ margin-left:0px; }
 }
